@@ -23,3 +23,4 @@ psutil>=5.9.0
 
 # Test runner used by CI and local release checks.
 pytest>=8.0.0
+httpx2>=2.4.0
