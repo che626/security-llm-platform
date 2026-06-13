@@ -16,10 +16,13 @@ SOC-oriented AI security analysis platform with RAG, SOAR playbook generation, A
 
 ## Screenshots
 
-The app is designed around a dark SOC console aesthetic. Add screenshots after first run:
+The app is designed around a dark SOC console aesthetic.
+
+![Login screen](docs/assets/login.png)
+
+Recommended screenshots to add after first run:
 
 ```text
-docs/assets/login.png
 docs/assets/dashboard.png
 docs/assets/log-analysis.png
 docs/assets/soar.png

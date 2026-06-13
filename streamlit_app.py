@@ -1378,7 +1378,7 @@ def build_full_report():
     low = get_metric_count(risk_level="低危")
 
     lines = []
-    lines.append("# 智能安全分析交互系统运行报告")
+    lines.append("# Security LLM Platform 运行报告")
     lines.append("")
     lines.append(f"- 生成时间：{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     lines.append(f"- 当前用户：{st.session_state.username}")
@@ -1439,9 +1439,9 @@ def render_login_page():
     st.markdown(
         """
 <div class="login-hero">
-    <div class="login-title">Intelligent Security Analysis System</div>
-    <div class="login-subtitle">基于 DeepSpeed ZeRO 微调与 RAG 增强的智能安全分析交互系统</div>
-    <div class="login-badge">SOC Security Operations Platform</div>
+    <div class="login-title">Security LLM Platform</div>
+    <div class="login-subtitle">SOC AI Command Center with RAG, SOAR, ATT&CK Mapping and FastAPI</div>
+    <div class="login-badge">Defensive Security Operations Portfolio</div>
 </div>
         """,
         unsafe_allow_html=True
@@ -3600,7 +3600,7 @@ def build_html_report(report_text):
 <html>
 <head>
 <meta charset="utf-8">
-<title>智能安全分析交互系统运行报告</title>
+<title>Security LLM Platform 运行报告</title>
 <style>
 body {{ font-family: "Microsoft YaHei", Arial, sans-serif; line-height: 1.7; padding: 36px; color: #111827; }}
 h1 {{ color: #0f172a; border-bottom: 2px solid #2563eb; padding-bottom: 8px; }}
@@ -3609,9 +3609,9 @@ pre {{ white-space: pre-wrap; word-break: break-word; background: #f8fafc; paddi
 </style>
 </head>
 <body>
-<h1>智能安全分析交互系统运行报告</h1>
+<h1>Security LLM Platform 运行报告</h1>
 <pre>{escaped}</pre>
-<div class="footer">该报告由“基于 DeepSpeed ZeRO 微调与 RAG 增强的智能安全分析交互系统”自动生成。</div>
+<div class="footer">该报告由 Security LLM Platform 自动生成。</div>
 </body>
 </html>"""
 
