@@ -29,9 +29,11 @@ The app is intentionally moving away from a flashy AI dashboard toward a denser 
 
 ![Login screen](docs/assets/login.png)
 
+![Mobile login](docs/assets/login-mobile.png)
+
 ![FastAPI docs](docs/assets/api-docs.png)
 
-Additional screenshots are generated during local review:
+Additional screenshots can be generated during local review:
 
 ```text
 docs/assets/workbench.png

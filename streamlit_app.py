@@ -122,6 +122,235 @@ ROLE_PAGES = {
     ]
 }
 
+I18N = {
+    "zh": {
+        "language_name": "中文",
+        "language_label": "界面语言",
+        "login_kicker": "AI 安全 / 后端作品集项目",
+        "login_title": "Security LLM Platform",
+        "login_subtitle": "一张面向安全分析师的证据工作台：从日志、IOC、RAG 上下文到 SOAR 响应计划，强调可复现、可解释和工程边界。",
+        "login_metric_1": "离线可演示",
+        "login_metric_2": "FastAPI 接口",
+        "login_metric_3": "RAG 回退",
+        "login_metric_4": "SOAR 模拟",
+        "workflow_label": "分析闭环",
+        "workflow_1_title": "证据输入",
+        "workflow_1_copy": "保留原始 SSH、Web、Firewall、DNS 和 IDS 类日志，方便复核。",
+        "workflow_2_title": "检测解释",
+        "workflow_2_copy": "输出风险等级、命中证据、IOC 和可读的判断原因。",
+        "workflow_3_title": "上下文增强",
+        "workflow_3_copy": "默认使用本地 RAG / 规则模板，外部模型只作为可选增强。",
+        "workflow_4_title": "响应编排",
+        "workflow_4_copy": "生成审批感知的 SOAR YAML，危险动作保持模拟和人工确认。",
+        "login_panel_label": "本地演示入口",
+        "sign_in": "登录工作台",
+        "login_copy": "演示账号写在页面中，便于面试官复现；这不是生产认证方案。",
+        "account": "账号",
+        "password": "密码",
+        "open_workbench": "进入分析工作台",
+        "login_success": "登录成功，正在进入工作台...",
+        "login_error": "演示账号或密码不正确。",
+        "demo_accounts": "演示账号",
+        "implementation_label": "工程信号",
+        "frontend_signal": "Streamlit 前端，具备后端不可用时的本地回退路径。",
+        "backend_signal": "FastAPI 暴露健康检查、日志分析、IOC、RAG、攻击链和 SOAR 接口。",
+        "boundary_signal": "只做防御性研判和响应模拟，不提供攻击利用能力。",
+        "sidebar_brand": "Security LLM",
+        "sidebar_subbrand": "SOC AI Command Center",
+        "status": "运行状态",
+        "connected": "已连接",
+        "offline_local": "离线，本地模式",
+        "offline": "离线",
+        "navigation": "导航",
+        "select_page": "选择页面",
+        "load_demo": "加载示例数据",
+        "demo_loaded": "示例数据已加载",
+        "logout": "退出登录",
+        "help": "使用帮助",
+        "quick_start": "快速开始",
+        "help_body": "**快速开始：**\n1. 点击“加载示例数据”\n2. 查看“安全态势仪表盘”\n3. 使用“日志分析器”分析日志\n4. 使用“AI 安全助手”提问\n\n**测试账号：**\n- admin / Admin#2026\n- analyst / Analyst#2026\n- researcher / Research#2026",
+        "home_label": "Analyst Workbench",
+        "home_title": "从原始证据到响应计划",
+        "home_copy": "首页不做炫技大屏，而是展示面试官最关心的闭环：输入是否真实、判断是否有证据、RAG 如何回退、接口边界是否清楚、报告是否能交付。",
+        "sample_input": "输入样例",
+        "sample_input_copy": "SSH 失败登录、SQL 注入探测、防火墙拒绝记录和可疑 HTTP 回连摘要。",
+        "detection": "检测解释",
+        "detection_copy": "规则识别暴力破解、SQL 注入、端口扫描和 C2 类行为，并展示证据。",
+        "rag_fallback": "RAG 回退",
+        "rag_fallback_copy": "默认使用本地安全知识，外部 LLM 不在线时也能稳定演示。",
+        "api_surface": "API 边界",
+        "api_surface_copy": "FastAPI 暴露同一套工作流，便于检查后端接口设计。",
+        "next_actions": "推荐演示路径",
+        "next_1": "先加载示例数据，进入仪表盘检查事件状态。",
+        "next_2": "运行日志分析，确认风险结论来自可见证据。",
+        "next_3": "打开 SOAR 生成器，检查危险动作是否需要人工审批。",
+        "next_4": "打开 FastAPI /docs，查看接口契约和返回结构。",
+        "load_demo_evidence": "加载演示证据与事件",
+        "demo_data_loaded": "演示数据已加载。",
+        "analyses": "分析记录",
+        "high_risk": "高危事件",
+        "open_incidents": "未关闭事件",
+        "assistant_turns": "助手问答",
+        "history_entries": "本地历史记录",
+        "needs_review": "需要分析师复核",
+        "not_closed": "尚未关闭",
+        "fallback_mode": "RAG / 回退模式",
+        "review_path": "演示路径",
+        "recent_evidence": "最近证据链",
+        "empty_evidence": "暂无本地证据。请加载示例数据，或运行一个分析模块来填充工作台。",
+        "capability_matrix": "能力矩阵",
+        "dashboard_label": "Operations Dashboard",
+        "dashboard_title": "当前态势",
+        "critical": "严重",
+        "high": "高",
+        "medium": "中",
+        "low": "低",
+        "critical_desc": "存在多个高危发现，请优先复核证据并规划遏制措施。",
+        "high_desc": "存在高危证据，请确认来源、受影响主机和成功访问痕迹。",
+        "medium_desc": "存在中危发现，建议继续关联分析并观察重复活动。",
+        "low_desc": "当前本地历史中未发现明显高危事件。",
+        "total_analyses": "总分析数",
+        "medium_risk": "中危事件",
+        "incident_queue": "事件队列",
+        "recent_records": "最近分析记录",
+        "no_incidents": "暂无事件。",
+        "no_history": "暂无本地历史。请加载示例数据或运行日志分析、SOAR 生成、流量解释模块。",
+        "module_usage": "模块使用",
+        "risk_distribution": "风险分布",
+        "metric_history": "历史记录",
+        "metric_triage": "待研判",
+        "metric_correlate": "持续关联",
+    },
+    "en": {
+        "language_name": "English",
+        "language_label": "Language",
+        "login_kicker": "AI security / backend portfolio project",
+        "login_title": "Security LLM Platform",
+        "login_subtitle": "An evidence workbench for security analysts: logs, IOCs, RAG context and SOAR response plans with reproducible behavior and clear engineering boundaries.",
+        "login_metric_1": "Offline demo",
+        "login_metric_2": "FastAPI",
+        "login_metric_3": "RAG fallback",
+        "login_metric_4": "SOAR simulation",
+        "workflow_label": "Analysis loop",
+        "workflow_1_title": "Evidence intake",
+        "workflow_1_copy": "Keep original SSH, web, firewall, DNS and IDS-like logs visible for review.",
+        "workflow_2_title": "Detection reasoning",
+        "workflow_2_copy": "Return risk level, matched evidence, IOCs and readable reasoning.",
+        "workflow_3_title": "Context retrieval",
+        "workflow_3_copy": "Use local RAG and rule templates by default; external models are optional.",
+        "workflow_4_title": "Response planning",
+        "workflow_4_copy": "Generate approval-aware SOAR YAML while keeping risky actions simulated.",
+        "login_panel_label": "Local demo access",
+        "sign_in": "Sign in",
+        "login_copy": "Demo credentials are documented for reproducible review. This is not a production authentication model.",
+        "account": "Account",
+        "password": "Password",
+        "open_workbench": "Open analyst workbench",
+        "login_success": "Login successful. Opening workbench...",
+        "login_error": "Invalid demo account or password.",
+        "demo_accounts": "Demo accounts",
+        "implementation_label": "Implementation signals",
+        "frontend_signal": "Streamlit frontend with stable local fallback when the backend is unavailable.",
+        "backend_signal": "FastAPI endpoints for health, log analysis, IOC, RAG, attack chain and SOAR.",
+        "boundary_signal": "Defensive analysis and simulated response only; no exploit capability is provided.",
+        "sidebar_brand": "Security LLM",
+        "sidebar_subbrand": "SOC AI Command Center",
+        "status": "Runtime Status",
+        "connected": "Connected",
+        "offline_local": "Offline, local mode",
+        "offline": "Offline",
+        "navigation": "Navigation",
+        "select_page": "Select page",
+        "load_demo": "Load demo data",
+        "demo_loaded": "Demo data loaded",
+        "logout": "Sign out",
+        "help": "Help",
+        "quick_start": "Quick start",
+        "help_body": "**Quick start:**\n1. Click “Load demo data”\n2. Open “Security Posture Dashboard”\n3. Analyze logs in “Log Analyzer”\n4. Ask questions in “AI Security Assistant”\n\n**Demo accounts:**\n- admin / Admin#2026\n- analyst / Analyst#2026\n- researcher / Research#2026",
+        "home_label": "Analyst Workbench",
+        "home_title": "From raw evidence to response plan",
+        "home_copy": "The first screen shows the loop interviewers care about: realistic input, evidence-based judgment, RAG fallback, explicit API boundaries and a deliverable report path.",
+        "sample_input": "Sample input",
+        "sample_input_copy": "SSH failed logins, SQL injection probes, firewall deny records and suspicious HTTP callback summaries.",
+        "detection": "Detection",
+        "detection_copy": "Rules identify brute force, SQL injection, port scan and C2-like behavior with visible evidence.",
+        "rag_fallback": "RAG fallback",
+        "rag_fallback_copy": "Local security knowledge keeps the demo stable when no external LLM is available.",
+        "api_surface": "API surface",
+        "api_surface_copy": "FastAPI exposes the same workflow so backend contracts can be inspected.",
+        "next_actions": "Recommended demo path",
+        "next_1": "Load demo data, then open the dashboard to inspect incident state.",
+        "next_2": "Run log analysis and verify the evidence behind each risk conclusion.",
+        "next_3": "Open SOAR generation and confirm risky actions require manual approval.",
+        "next_4": "Open FastAPI /docs to inspect endpoint contracts and response shape.",
+        "load_demo_evidence": "Load demo evidence and incidents",
+        "demo_data_loaded": "Demo data loaded.",
+        "analyses": "Analyses",
+        "high_risk": "High risk",
+        "open_incidents": "Open incidents",
+        "assistant_turns": "Assistant turns",
+        "history_entries": "local history entries",
+        "needs_review": "requires analyst review",
+        "not_closed": "not yet closed",
+        "fallback_mode": "RAG / fallback mode",
+        "review_path": "Review path",
+        "recent_evidence": "Recent evidence trail",
+        "empty_evidence": "No local evidence yet. Load demo data or run one analysis module to populate the workbench.",
+        "capability_matrix": "Capability matrix",
+        "dashboard_label": "Operations Dashboard",
+        "dashboard_title": "Current posture",
+        "critical": "Critical",
+        "high": "High",
+        "medium": "Medium",
+        "low": "Low",
+        "critical_desc": "Multiple high-risk findings are open. Prioritize evidence review and containment planning.",
+        "high_desc": "High-risk evidence exists. Confirm source, affected host and successful access traces.",
+        "medium_desc": "Medium-risk findings exist. Continue correlation and watch for repeat activity.",
+        "low_desc": "No obvious high-risk finding in the current local history.",
+        "total_analyses": "Total analyses",
+        "medium_risk": "Medium risk",
+        "incident_queue": "Incident queue",
+        "recent_records": "Recent analysis records",
+        "no_incidents": "No incidents yet.",
+        "no_history": "No local history yet. Load demo data or run log analysis, SOAR generation, or traffic explanation first.",
+        "module_usage": "Module usage",
+        "risk_distribution": "Risk distribution",
+        "metric_history": "history records",
+        "metric_triage": "needs triage",
+        "metric_correlate": "monitor / correlate",
+    },
+}
+
+PAGE_LABELS = {
+    "en": {
+        "系统首页": "Home",
+        "安全态势仪表盘": "Security Posture Dashboard",
+        "后端服务状态": "Backend Service Status",
+        "AI 安全助手": "AI Security Assistant",
+        "模型接入配置中心": "Model Provider Config",
+        "日志分析器": "Log Analyzer",
+        "流量摘要解释器": "Traffic Summary Explainer",
+        "IOC 威胁指标提取器": "IOC Extractor",
+        "攻击链分析": "Attack Chain Analysis",
+        "ATT&CK 技术点映射": "ATT&CK Mapping",
+        "SOAR 剧本生成器": "SOAR Playbook Generator",
+        "RAG 安全知识库": "RAG Knowledge Base",
+        "事件处置中心": "Incident Response Center",
+        "分析历史记录": "Analysis History",
+        "报告导出中心": "Report Export",
+        "安全指令数据集构造器": "Security Dataset Builder",
+        "DeepSpeed ZeRO 实验控制台": "DeepSpeed ZeRO Lab",
+        "训练控制台": "Training Console",
+        "基准测试中心": "Benchmark Center",
+        "模型效果评测中心": "Model Evaluation",
+        "资产风险画像": "Asset Risk Profile",
+        "安全规则管理": "Security Rule Management",
+        "系统监控": "System Monitor",
+        "系统说明": "System Notes",
+    },
+    "zh": {},
+}
+
 
 SAMPLE_MIXED_LOG = """May 11 10:01:02 server sshd[1001]: Failed password for root from 8.8.8.8 port 53422 ssh2
 May 11 10:01:06 server sshd[1002]: Failed password for admin from 8.8.8.8 port 53423 ssh2
@@ -391,9 +620,31 @@ def make_jsonl(records):
     return "\n".join(json.dumps(item, ensure_ascii=False) for item in records)
 
 
+def lang():
+    return st.session_state.get("language", "zh")
+
+
+def tr(key):
+    current = lang()
+    return I18N.get(current, I18N["zh"]).get(key, I18N["zh"].get(key, key))
+
+
+def page_label(page_name):
+    return PAGE_LABELS.get(lang(), {}).get(page_name, page_name)
+
+
+def risk_label(level):
+    if lang() == "en":
+        return {"高危": "High", "中高危": "Medium-High", "中危": "Medium", "低危": "Low"}.get(level, level)
+    return level
+
+
 def init_session_state():
     if "logged_in" not in st.session_state:
         st.session_state.logged_in = False
+
+    if "language" not in st.session_state:
+        st.session_state.language = "zh"
 
     if "username" not in st.session_state:
         st.session_state.username = ""
@@ -631,7 +882,7 @@ def test_model_connection(config):
 
 
 def inject_css():
-    st.markdown(
+    st.html(
         """
 <style>
 /* ===== GLOBAL BACKGROUND ===== */
@@ -640,15 +891,7 @@ def inject_css():
     color: #e2e8f0;
 }
 .stApp::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background:
-        radial-gradient(ellipse 80% 60% at 50% -20%, rgba(56,189,248,0.08), transparent),
-        radial-gradient(ellipse 60% 40% at 80% 100%, rgba(16,185,129,0.06), transparent),
-        linear-gradient(180deg, #0a0e1a 0%, #0f1629 50%, #0a0e1a 100%);
-    pointer-events: none;
-    z-index: 0;
+    content: none;
 }
 .block-container { position: relative; z-index: 1; }
 
@@ -1305,9 +1548,295 @@ hr { border-color: rgba(56,189,248,0.1) !important; margin: 1.5rem 0; }
     padding: 12px 0 6px;
     margin-top: 8px;
 }
+
+/* ===== PREMIUM INTELLIGENCE DESK THEME ===== */
+:root {
+    --ink: #0d0c0a;
+    --charcoal: #15130f;
+    --panel: rgba(31, 28, 22, 0.86);
+    --panel-2: rgba(24, 22, 18, 0.92);
+    --line: rgba(214, 184, 120, 0.16);
+    --line-strong: rgba(214, 184, 120, 0.32);
+    --gold: #c9a45c;
+    --gold-soft: #e0c98f;
+    --paper: #f4ead8;
+    --muted: #a79b87;
+    --muted-2: #756c5d;
+    --red: #b96150;
+    --olive: #8fa06c;
+    --amber: #d1a34f;
+}
+.stApp {
+    background:
+        linear-gradient(180deg, rgba(13,12,10,0.96), rgba(18,16,13,0.98)),
+        repeating-linear-gradient(90deg, rgba(244,234,216,0.018) 0, rgba(244,234,216,0.018) 1px, transparent 1px, transparent 72px);
+    color: var(--paper);
+}
+.stApp::before {
+    content: none !important;
+    display: none !important;
+}
+.block-container {
+    max-width: 1320px;
+    padding-top: 2.1rem;
+    padding-bottom: 3rem;
+}
+header[data-testid="stHeader"],
+[data-testid="stToolbar"],
+[data-testid="stDecoration"] {
+    background: #0d0c0a !important;
+    color: var(--paper) !important;
+}
+[data-testid="stToolbar"] * {
+    color: var(--paper) !important;
+}
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #11100d 0%, #17140f 52%, #0d0c0a 100%);
+    border-right: 1px solid var(--line);
+}
+[data-testid="stSidebar"]::before {
+    background: linear-gradient(180deg, transparent, rgba(201,164,92,0.36), transparent);
+}
+[data-testid="stSidebar"] * { color: var(--muted); }
+h1, h2, h3, h4, h5, h6 { color: var(--paper); letter-spacing: 0; }
+h3 { color: var(--gold-soft); text-transform: none; }
+p, li, label, .stMarkdown, .stCaption { color: var(--muted); }
+hr { border-color: var(--line) !important; }
+.glass-card,
+.security-card,
+[data-testid="stMetric"],
+.mission-panel,
+.workbench-panel,
+.login-panel,
+.metric-tile,
+.page-guide,
+.getting-started,
+[data-testid="stChatMessage"] {
+    background: var(--panel) !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 18px 56px rgba(0,0,0,0.26) !important;
+}
+.glass-card:hover,
+.security-card:hover,
+[data-testid="stMetric"]:hover,
+.metric-tile:hover,
+.workbench-panel:hover,
+.login-panel:hover {
+    border-color: var(--line-strong) !important;
+    box-shadow: 0 22px 64px rgba(0,0,0,0.34) !important;
+    transform: translateY(-1px);
+}
+.hero-banner {
+    background: linear-gradient(135deg, rgba(31,28,22,0.90), rgba(20,18,15,0.94)) !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 10px !important;
+}
+.hero-banner::before { background: none !important; }
+.hero-kicker,
+.panel-label,
+.workflow-id,
+.sidebar-group-header,
+.page-guide-title,
+.signal-value {
+    color: var(--gold) !important;
+}
+.hero-title,
+.login-heading,
+.panel-title,
+.mission-title,
+.sidebar-user-card .user-name,
+.metric-value,
+.event-type,
+.account-pill strong {
+    color: var(--paper) !important;
+}
+.hero-subtitle,
+.login-copy,
+.panel-copy,
+.workflow-copy,
+.metric-note,
+.event-summary,
+.evidence-value,
+.mission-text,
+.small-muted {
+    color: var(--muted) !important;
+}
+.login-shell {
+    grid-template-columns: minmax(0, 1.18fr) minmax(360px, 0.82fr);
+    gap: 22px;
+    margin-top: 18px;
+}
+.login-panel {
+    position: relative;
+    overflow: hidden;
+    padding: 30px;
+}
+.login-panel > * { position: relative; z-index: 1; }
+.login-heading {
+    font-size: clamp(32px, 5vw, 56px);
+    line-height: 0.98;
+    max-width: 850px;
+    margin-top: 8px;
+}
+.login-panel,
+.login-panel div,
+.workbench-panel,
+.workbench-panel div,
+.intelligence-map,
+.intelligence-map div {
+    color: var(--paper);
+}
+.login-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 22px;
+}
+.login-metric {
+    border: 1px solid var(--line);
+    background: rgba(12,11,9,0.42);
+    border-radius: 9px;
+    padding: 12px;
+    color: var(--paper);
+    font-size: 12px;
+    font-weight: 750;
+}
+.workflow-row {
+    grid-template-columns: 86px 1fr;
+    border-top: 1px solid var(--line);
+}
+.workflow-title { color: var(--paper); }
+.account-pill,
+.evidence-row,
+.signal-item {
+    background: rgba(12,11,9,0.38) !important;
+    border: 1px solid rgba(214,184,120,0.13) !important;
+    border-radius: 8px !important;
+}
+.evidence-key,
+.metric-label {
+    color: var(--gold) !important;
+}
+.next-step {
+    border-left-color: var(--gold) !important;
+    background: rgba(201,164,92,0.07) !important;
+    color: var(--paper) !important;
+}
+.event-row {
+    border-top: 1px solid var(--line);
+    grid-template-columns: 92px 1fr 72px;
+}
+.risk-high { color: var(--red) !important; }
+.risk-medium { color: var(--amber) !important; }
+.risk-low { color: var(--olive) !important; }
+.sidebar-user-card {
+    background: linear-gradient(135deg, rgba(201,164,92,0.09), rgba(185,97,80,0.045)) !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 9px !important;
+}
+.sidebar-user-card .user-role { color: var(--gold) !important; }
+.sidebar-status {
+    border: 1px solid rgba(214,184,120,0.10);
+    background: rgba(12,11,9,0.28);
+}
+.status-dot-green { background: var(--olive); box-shadow: 0 0 8px rgba(143,160,108,0.46); }
+.status-dot-amber { background: var(--amber); box-shadow: 0 0 8px rgba(209,163,79,0.42); }
+.status-dot-red { background: var(--red); box-shadow: 0 0 8px rgba(185,97,80,0.42); }
+.stButton > button {
+    background: rgba(20,18,15,0.88) !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 8px !important;
+    color: var(--paper) !important;
+    box-shadow: none !important;
+}
+.stButton > button *,
+button[data-testid^="stBaseButton"] * {
+    color: var(--paper) !important;
+}
+.stButton > button:hover {
+    border-color: var(--line-strong) !important;
+    color: var(--gold-soft) !important;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.26) !important;
+    transform: translateY(-1px);
+}
+.stButton > button[kind="primary"],
+.stButton > button[data-testid="stBaseButton-primary"] {
+    background: linear-gradient(135deg, #c9a45c 0%, #8f6e35 100%) !important;
+    color: #120f0b !important;
+    border: 1px solid rgba(224,201,143,0.42) !important;
+    font-weight: 800 !important;
+}
+.stButton > button[kind="primary"] *,
+.stButton > button[data-testid="stBaseButton-primary"] *,
+button[data-testid="stBaseButton-primary"] * {
+    color: #120f0b !important;
+}
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea,
+.stSelectbox > div > div > div,
+[data-baseweb="select"] > div {
+    background: rgba(13,12,10,0.82) !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 8px !important;
+    color: var(--paper) !important;
+}
+.stTextInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus {
+    border-color: var(--gold) !important;
+    box-shadow: 0 0 0 2px rgba(201,164,92,0.12) !important;
+}
+.stTabs [data-baseweb="tab-list"] {
+    background: rgba(13,12,10,0.68) !important;
+    border: 1px solid var(--line);
+}
+.stTabs [aria-selected="true"] {
+    background: rgba(201,164,92,0.11) !important;
+    color: var(--gold-soft) !important;
+}
+div[data-testid="stDataFrame"] {
+    border: 1px solid var(--line) !important;
+    border-radius: 8px !important;
+}
+.premium-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+    gap: 18px;
+    margin-bottom: 20px;
+}
+.intelligence-map {
+    min-height: 100%;
+    background:
+        linear-gradient(rgba(244,234,216,0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(244,234,216,0.018) 1px, transparent 1px),
+        rgba(12,11,9,0.28);
+    background-size: 34px 34px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px;
+}
+.intel-node {
+    border: 1px solid rgba(214,184,120,0.18);
+    background: rgba(31,28,22,0.76);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+.intel-node strong { color: var(--paper); display: block; margin-bottom: 4px; }
+.intel-node span { color: var(--muted); font-size: 12px; line-height: 1.45; }
+.mini-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--line-strong), transparent);
+    margin: 16px 0;
+}
+::-webkit-scrollbar-thumb { background: rgba(201,164,92,0.26); }
+::-webkit-scrollbar-thumb:hover { background: rgba(201,164,92,0.44); }
+@media (max-width: 960px) {
+    .premium-shell, .login-shell, .workbench-grid, .ops-grid { grid-template-columns: 1fr; }
+    .metric-row, .account-strip, .login-metrics { grid-template-columns: 1fr 1fr; }
+}
 </style>
         """,
-        unsafe_allow_html=True
     )
 
 
@@ -1568,57 +2097,94 @@ def build_full_report():
 
 
 def render_login_page():
-    st.markdown(
-        """
-<div class="login-shell">
+    left, right = st.columns([1.34, 0.86], gap="large")
+
+    with left:
+        st.markdown(
+            f"""
     <div class="login-panel">
-        <div class="panel-label">Portfolio system for AI security / backend interviews</div>
-        <div class="login-heading">Security analysis workbench, not another chatbot demo.</div>
+        <div class="panel-label">{tr("login_kicker")}</div>
+        <div class="login-heading">{tr("login_title")}</div>
         <div class="login-copy">
-            This project demonstrates a defensive SOC workflow: raw logs go in, evidence and IOCs come out, RAG adds security context, and SOAR playbooks stay simulated with manual approval. The backend exposes the same workflow through FastAPI so reviewers can inspect both product behavior and engineering boundaries.
+            {tr("login_subtitle")}
         </div>
+        <div class="login-metrics">
+            <div class="login-metric">{tr("login_metric_1")}</div>
+            <div class="login-metric">{tr("login_metric_2")}</div>
+            <div class="login-metric">{tr("login_metric_3")}</div>
+            <div class="login-metric">{tr("login_metric_4")}</div>
+        </div>
+        <div class="mini-divider"></div>
+        <div class="panel-label">{tr("workflow_label")}</div>
         <div class="workflow-list">
-            <div class="workflow-row"><div class="workflow-id">STEP 01</div><div><div class="workflow-title">Ingest evidence</div><div class="workflow-copy">Paste SSH, web, firewall, DNS or IDS-like logs and keep the original evidence visible.</div></div></div>
-            <div class="workflow-row"><div class="workflow-id">STEP 02</div><div><div class="workflow-title">Detect and explain</div><div class="workflow-copy">Classify brute force, SQL injection, scans and C2-like behavior with readable reasons.</div></div></div>
-            <div class="workflow-row"><div class="workflow-id">STEP 03</div><div><div class="workflow-title">Retrieve context</div><div class="workflow-copy">Use local RAG knowledge as the default fallback before optional model providers are introduced.</div></div></div>
-            <div class="workflow-row"><div class="workflow-id">STEP 04</div><div><div class="workflow-title">Plan response</div><div class="workflow-copy">Generate SOAR YAML, require approval for risky actions, and export incident reports.</div></div></div>
+            <div class="workflow-row"><div class="workflow-id">STEP 01</div><div><div class="workflow-title">{tr("workflow_1_title")}</div><div class="workflow-copy">{tr("workflow_1_copy")}</div></div></div>
+            <div class="workflow-row"><div class="workflow-id">STEP 02</div><div><div class="workflow-title">{tr("workflow_2_title")}</div><div class="workflow-copy">{tr("workflow_2_copy")}</div></div></div>
+            <div class="workflow-row"><div class="workflow-id">STEP 03</div><div><div class="workflow-title">{tr("workflow_3_title")}</div><div class="workflow-copy">{tr("workflow_3_copy")}</div></div></div>
+            <div class="workflow-row"><div class="workflow-id">STEP 04</div><div><div class="workflow-title">{tr("workflow_4_title")}</div><div class="workflow-copy">{tr("workflow_4_copy")}</div></div></div>
         </div>
     </div>
-    <div class="login-panel">
-        <div class="panel-label">Local demo access</div>
-        <div class="panel-title">Sign in</div>
-        <div class="panel-copy">Demo credentials are intentionally documented for reproducible review. They are not a production authentication model.</div>
-""",
-        unsafe_allow_html=True,
-    )
-    username = st.text_input("Account", placeholder="admin / analyst / researcher")
-    password = st.text_input("Password", type="password", placeholder="Demo password")
-    login_btn = st.button("Open analyst workbench", use_container_width=True, type="primary")
-    if login_btn:
-        if username in USERS and USERS[username]["password"] == password:
-            st.session_state.logged_in = True
-            st.session_state.username = username
-            st.session_state.role = USERS[username]["role"]
-            st.success("Login successful. Opening workbench...")
-            st.rerun()
-        else:
-            st.error("Invalid demo account or password.")
+            """,
+            unsafe_allow_html=True,
+        )
 
-    st.markdown(
-        """
-        <div class="account-strip">
-            <div class="account-pill"><strong>admin</strong>Admin#2026</div>
-            <div class="account-pill"><strong>analyst</strong>Analyst#2026</div>
-            <div class="account-pill"><strong>researcher</strong>Research#2026</div>
-        </div>
+    with right:
+        st.markdown(
+            f"""
+    <div class="login-panel login-form-intro">
+        <div class="panel-label">{tr("login_panel_label")}</div>
+        <div class="panel-title">{tr("sign_in")}</div>
+        <div class="panel-copy">{tr("login_copy")}</div>
+    </div>
+            """,
+            unsafe_allow_html=True,
+        )
+        language_labels = {"zh": "中文", "en": "English"}
+        language_options = ["zh", "en"]
+        selected_language = st.selectbox(
+            tr("language_label"),
+            language_options,
+            index=language_options.index(st.session_state.get("language", "zh")),
+            format_func=lambda value: language_labels[value],
+        )
+        if selected_language != st.session_state.language:
+            st.session_state.language = selected_language
+            st.rerun()
+
+        username = st.text_input(tr("account"), placeholder="admin / analyst / researcher")
+        password = st.text_input(tr("password"), type="password", placeholder="Admin#2026")
+        login_btn = st.button(tr("open_workbench"), use_container_width=True, type="primary")
+        if login_btn:
+            if username in USERS and USERS[username]["password"] == password:
+                st.session_state.logged_in = True
+                st.session_state.username = username
+                st.session_state.role = USERS[username]["role"]
+                st.success(tr("login_success"))
+                st.rerun()
+            else:
+                st.error(tr("login_error"))
+
+        st.markdown(
+            f"""
+<div class="login-panel" style="padding:18px; margin-top:16px;">
+    <div class="panel-label">{tr("demo_accounts")}</div>
+    <div class="account-strip">
+        <div class="account-pill"><strong>admin</strong>Admin#2026</div>
+        <div class="account-pill"><strong>analyst</strong>Analyst#2026</div>
+        <div class="account-pill"><strong>researcher</strong>Research#2026</div>
     </div>
 </div>
-<div class="workbench-panel" style="margin-top:14px;">
-    <div class="panel-label">Implementation signals</div>
-    <div class="evidence-table">
-        <div class="evidence-row"><div class="evidence-key">Frontend</div><div class="evidence-value">Streamlit analyst console with stable local fallback behavior.</div></div>
-        <div class="evidence-row"><div class="evidence-key">Backend</div><div class="evidence-value">FastAPI endpoints for chat, log analysis, IOC extraction, RAG retrieval and SOAR simulation.</div></div>
-        <div class="evidence-row"><div class="evidence-key">Boundary</div><div class="evidence-value">Defensive analysis only; generated response actions are simulated and approval-aware.</div></div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+    st.markdown(
+        f"""
+<div class="workbench-panel" style="margin-top:18px;">
+    <div class="panel-label">{tr("implementation_label")}</div>
+    <div class="premium-shell" style="grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:0;">
+        <div class="intel-node"><strong>Frontend</strong><span>{tr("frontend_signal")}</span></div>
+        <div class="intel-node"><strong>Backend</strong><span>{tr("backend_signal")}</span></div>
+        <div class="intel-node"><strong>Boundary</strong><span>{tr("boundary_signal")}</span></div>
     </div>
 </div>
         """,
@@ -1627,26 +2193,36 @@ def render_login_page():
 
 def render_sidebar():
     st.sidebar.markdown(
-        """
-<div style="text-align:center; padding:12px 0 16px; margin-bottom:12px; border-bottom:1px solid rgba(56,189,248,0.1);">
-    <div style="font-size:24px; margin-bottom:4px;">&#x1F6E1;</div>
-    <div style="font-size:16px; font-weight:800; color:#f1f5f9; letter-spacing:-0.5px;">Security LLM</div>
-    <div style="font-size:11px; color:#64748b; letter-spacing:1px; text-transform:uppercase;">SOC Platform</div>
+        f"""
+<div style="text-align:left; padding:14px 0 16px; margin-bottom:12px; border-bottom:1px solid rgba(214,184,120,0.16);">
+    <div style="font-size:11px; color:#c9a45c; letter-spacing:1.4px; text-transform:uppercase; font-weight:800;">{tr("sidebar_subbrand")}</div>
+    <div style="font-size:20px; font-weight:850; color:#f4ead8; letter-spacing:0; margin-top:4px;">{tr("sidebar_brand")}</div>
 </div>
         """,
         unsafe_allow_html=True
     )
 
-    role_emoji = {"管理员": "&#x1F451;", "安全分析师": "&#x1F6E1;", "研究人员": "&#x1F52C;"}
-    role_color = {"管理员": "#38bdf8", "安全分析师": "#4ade80", "研究人员": "#a78bfa"}
+    language_options = ["zh", "en"]
+    selected_language = st.sidebar.selectbox(
+        tr("language_label"),
+        language_options,
+        index=language_options.index(st.session_state.get("language", "zh")),
+        format_func=lambda value: I18N[value]["language_name"],
+    )
+    if selected_language != st.session_state.language:
+        st.session_state.language = selected_language
+        st.rerun()
+
+    role_emoji = {"管理员": "ADM", "安全分析师": "SOC", "研究人员": "LAB"}
+    role_color = {"管理员": "#c9a45c", "安全分析师": "#8fa06c", "研究人员": "#d1a34f"}
     emoji = role_emoji.get(st.session_state.role, "&#x1F464;")
-    color = role_color.get(st.session_state.role, "#94a3b8")
+    color = role_color.get(st.session_state.role, "#a79b87")
 
     st.sidebar.markdown(
         f"""
 <div class="sidebar-user-card">
     <div style="display:flex; align-items:center; gap:10px;">
-        <div style="font-size:28px;">{emoji}</div>
+        <div style="font-size:11px; color:#0d0c0a; background:#c9a45c; border-radius:6px; padding:6px 7px; font-weight:900; letter-spacing:.8px;">{emoji}</div>
         <div>
             <div class="user-name">{st.session_state.username}</div>
             <div class="user-role" style="color:{color};">{st.session_state.role}</div>
@@ -1676,10 +2252,10 @@ def render_sidebar():
     st.sidebar.markdown(
         f"""
 <div style="margin:12px 0 8px;">
-    <div style="font-size:11px; font-weight:700; color:#64748b; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">System Status</div>
+    <div style="font-size:11px; font-weight:800; color:#c9a45c; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">{tr("status")}</div>
     <div class="sidebar-status">
         <span class="status-dot {'status-dot-green' if backend_ok else 'status-dot-amber'}"></span>
-        <span>FastAPI Backend {'Connected' if backend_ok else 'Offline (local mode)'}</span>
+        <span>FastAPI Backend {tr("connected") if backend_ok else tr("offline_local")}</span>
     </div>
     <div class="sidebar-status">
         <span class="status-dot status-dot-green"></span>
@@ -1687,7 +2263,7 @@ def render_sidebar():
     </div>
     <div class="sidebar-status">
         <span class="status-dot {'status-dot-green' if ollama_ok else 'status-dot-amber'}"></span>
-        <span>Ollama Model {'Connected' if ollama_ok else 'Offline'}</span>
+        <span>Ollama Model {tr("connected") if ollama_ok else tr("offline")}</span>
     </div>
 </div>
         """,
@@ -1697,7 +2273,7 @@ def render_sidebar():
     st.sidebar.divider()
 
     # Grouped navigation with icons
-    st.sidebar.markdown('<div class="sidebar-group-header">&#x1F4CB; Navigation</div>', unsafe_allow_html=True)
+    st.sidebar.markdown(f'<div class="sidebar-group-header">{tr("navigation")}</div>', unsafe_allow_html=True)
 
     nav_groups = [
         ("Overview", [
@@ -1748,7 +2324,7 @@ def render_sidebar():
     for _, items in nav_groups:
         for icon, page_name in items:
             if page_name in pages:
-                label = f"{icon} {page_name}"
+                label = f"{icon} {page_label(page_name)}"
                 page_options.append(label)
                 page_map[label] = page_name
 
@@ -1761,7 +2337,7 @@ def render_sidebar():
             break
 
     selected_label = st.sidebar.selectbox(
-        "Select Page",
+        tr("select_page"),
         page_options,
         index=current_idx,
         label_visibility="collapsed",
@@ -1771,12 +2347,12 @@ def render_sidebar():
 
     st.sidebar.divider()
 
-    if st.sidebar.button("加载示例数据", use_container_width=True):
+    if st.sidebar.button(tr("load_demo"), use_container_width=True):
         load_demo_data()
-        st.sidebar.success("示例数据已加载")
+        st.sidebar.success(tr("demo_loaded"))
         st.rerun()
 
-    if st.sidebar.button("退出登录", use_container_width=True):
+    if st.sidebar.button(tr("logout"), use_container_width=True):
         st.session_state.logged_in = False
         st.session_state.username = ""
         st.session_state.role = ""
@@ -1784,50 +2360,34 @@ def render_sidebar():
 
     # 帮助信息
     st.sidebar.divider()
-    with st.sidebar.expander("使用帮助", expanded=False):
-        st.markdown("""
-**快速开始：**
-1. 点击"加载示例数据"
-2. 查看"安全态势仪表盘"
-3. 使用"日志分析器"分析日志
-4. 使用"AI 安全助手"提问
-
-**测试账号：**
-- admin / Admin#2026
-- analyst / Analyst#2026
-- researcher / Research#2026
-
-**运行基准测试：**
-```bash
-python training/run_real_benchmark.py
-```
-        """)
+    with st.sidebar.expander(tr("help"), expanded=False):
+        st.markdown(tr("help_body"))
 
     return page
 
 
 def render_home():
     st.markdown(
-        """
-<div class="workbench-grid">
+        f"""
+<div class="premium-shell">
     <div class="workbench-panel">
-        <div class="panel-label">Analyst Workbench</div>
-        <div class="panel-title">From raw evidence to response plan</div>
-        <div class="panel-copy">This screen is the review path for an AI security / backend interview: it shows the input, detection reason, RAG fallback, API boundary and response output in one place.</div>
+        <div class="panel-label">{tr("home_label")}</div>
+        <div class="login-heading" style="font-size:42px; margin-bottom:14px;">{tr("home_title")}</div>
+        <div class="panel-copy">{tr("home_copy")}</div>
         <div class="evidence-table">
-            <div class="evidence-row"><div class="evidence-key">Sample input</div><div class="evidence-value">SSH failed passwords, SQL injection probe, firewall deny records and suspicious HTTP callback summary.</div></div>
-            <div class="evidence-row"><div class="evidence-key">Detection</div><div class="evidence-value">Rules identify brute force, SQL injection, port scan and C2-like behavior with visible evidence.</div></div>
-            <div class="evidence-row"><div class="evidence-key">RAG fallback</div><div class="evidence-value">Local security knowledge is used by default, so the project remains demoable without an external LLM.</div></div>
-            <div class="evidence-row"><div class="evidence-key">API surface</div><div class="evidence-value">FastAPI exposes the same workflow through documented endpoints for backend review.</div></div>
+            <div class="evidence-row"><div class="evidence-key">{tr("sample_input")}</div><div class="evidence-value">{tr("sample_input_copy")}</div></div>
+            <div class="evidence-row"><div class="evidence-key">{tr("detection")}</div><div class="evidence-value">{tr("detection_copy")}</div></div>
+            <div class="evidence-row"><div class="evidence-key">{tr("rag_fallback")}</div><div class="evidence-value">{tr("rag_fallback_copy")}</div></div>
+            <div class="evidence-row"><div class="evidence-key">{tr("api_surface")}</div><div class="evidence-value">{tr("api_surface_copy")}</div></div>
         </div>
     </div>
-    <div class="workbench-panel">
-        <div class="panel-label">Recommended next actions</div>
+    <div class="intelligence-map">
+        <div class="panel-label">{tr("next_actions")}</div>
         <div class="next-step-list">
-            <div class="next-step">Load demo data, then open the dashboard to inspect incident state.</div>
-            <div class="next-step">Run log analysis and verify the evidence list before reading the generated report.</div>
-            <div class="next-step">Open SOAR generation and confirm risky actions require manual approval.</div>
-            <div class="next-step">Open FastAPI /docs to inspect endpoint contracts.</div>
+            <div class="intel-node"><strong>01</strong><span>{tr("next_1")}</span></div>
+            <div class="intel-node"><strong>02</strong><span>{tr("next_2")}</span></div>
+            <div class="intel-node"><strong>03</strong><span>{tr("next_3")}</span></div>
+            <div class="intel-node"><strong>04</strong><span>{tr("next_4")}</span></div>
         </div>
     </div>
 </div>
@@ -1836,10 +2396,10 @@ def render_home():
     )
 
     if not st.session_state.get("demo_loaded", False):
-        if st.button("Load demo evidence and incidents", type="primary", use_container_width=True):
+        if st.button(tr("load_demo_evidence"), type="primary", use_container_width=True):
             load_demo_data()
             st.session_state.demo_loaded = True
-            st.success("Demo data loaded.")
+            st.success(tr("demo_data_loaded"))
             st.rerun()
 
     total = len(st.session_state.history)
@@ -1850,24 +2410,24 @@ def render_home():
     st.markdown(
         f"""
 <div class="metric-row">
-    <div class="metric-tile"><div class="metric-label">Analyses</div><div class="metric-value">{total}</div><div class="metric-note">local history entries</div></div>
-    <div class="metric-tile"><div class="metric-label">High risk</div><div class="metric-value">{high}</div><div class="metric-note">requires analyst review</div></div>
-    <div class="metric-tile"><div class="metric-label">Open incidents</div><div class="metric-value">{pending}</div><div class="metric-note">not yet closed</div></div>
-    <div class="metric-tile"><div class="metric-label">Assistant turns</div><div class="metric-value">{ai_count}</div><div class="metric-note">RAG / fallback mode</div></div>
+    <div class="metric-tile"><div class="metric-label">{tr("analyses")}</div><div class="metric-value">{total}</div><div class="metric-note">{tr("history_entries")}</div></div>
+    <div class="metric-tile"><div class="metric-label">{tr("high_risk")}</div><div class="metric-value">{high}</div><div class="metric-note">{tr("needs_review")}</div></div>
+    <div class="metric-tile"><div class="metric-label">{tr("open_incidents")}</div><div class="metric-value">{pending}</div><div class="metric-note">{tr("not_closed")}</div></div>
+    <div class="metric-tile"><div class="metric-label">{tr("assistant_turns")}</div><div class="metric-value">{ai_count}</div><div class="metric-note">{tr("fallback_mode")}</div></div>
 </div>
         """,
         unsafe_allow_html=True,
     )
 
-    st.markdown("### Review path")
+    st.markdown(f"### {tr('review_path')}")
     action_cols = st.columns(6)
     actions = [
-        ("Log analysis", "日志分析器"),
-        ("IOC extraction", "IOC 威胁指标提取器"),
-        ("Attack chain", "攻击链分析"),
-        ("SOAR plan", "SOAR 剧本生成器"),
-        ("Reports", "报告导出中心"),
-        ("API status", "后端服务状态"),
+        (page_label("日志分析器"), "日志分析器"),
+        (page_label("IOC 威胁指标提取器"), "IOC 威胁指标提取器"),
+        (page_label("攻击链分析"), "攻击链分析"),
+        (page_label("SOAR 剧本生成器"), "SOAR 剧本生成器"),
+        (page_label("报告导出中心"), "报告导出中心"),
+        (page_label("后端服务状态"), "后端服务状态"),
     ]
     for col, (label, page_name) in zip(action_cols, actions):
         with col:
@@ -1876,31 +2436,40 @@ def render_home():
                 st.rerun()
 
     if st.session_state.get("history"):
-        st.markdown("### Recent evidence trail")
+        st.markdown(f"### {tr('recent_evidence')}")
         for item in st.session_state.history[:5]:
             risk = item.get("风险等级", "低危")
             risk_class = "risk-high" if risk == "高危" else "risk-medium" if risk in ["中高危", "中危"] else "risk-low"
             st.markdown(
                 f"""
 <div class="event-row">
-    <div class="{risk_class}">{risk}</div>
-    <div><div class="event-type">{item.get('模块', '')} / {item.get('事件类型', '')}</div><div class="event-summary">{item.get('摘要', '')}</div></div>
+    <div class="{risk_class}">{risk_label(risk)}</div>
+    <div><div class="event-type">{page_label(item.get('模块', ''))} / {item.get('事件类型', '')}</div><div class="event-summary">{item.get('摘要', '')}</div></div>
     <div class="small-muted">{item.get('时间', '')[-8:]}</div>
 </div>
                 """,
                 unsafe_allow_html=True,
             )
     else:
-        st.info("No local evidence yet. Load demo data or run one analysis module to populate the workbench.")
+        st.info(tr("empty_evidence"))
 
-    st.markdown("### Capability matrix")
-    modules = pd.DataFrame([
-        ["Detection", "Implemented", "SSH brute force, SQL injection, scan and C2-like indicators"],
-        ["RAG fallback", "Implemented", "Local knowledge lookup keeps the assistant usable without a model server"],
-        ["FastAPI", "Implemented", "Health, chat, log analysis, IOC, attack chain, RAG and SOAR endpoints"],
-        ["SOAR", "Implemented", "YAML generation with manual approval for risky response actions"],
-        ["DeepSpeed / LoRA", "Research extension", "Scaffolding only unless validated on real GPU hardware"],
-    ], columns=["Area", "Status", "Reviewer signal"])
+    st.markdown(f"### {tr('capability_matrix')}")
+    if lang() == "en":
+        modules = pd.DataFrame([
+            ["Detection", "Implemented", "SSH brute force, SQL injection, scan and C2-like indicators"],
+            ["RAG fallback", "Implemented", "Local knowledge lookup keeps the assistant usable without a model server"],
+            ["FastAPI", "Implemented", "Health, chat, log analysis, IOC, attack chain, RAG and SOAR endpoints"],
+            ["SOAR", "Implemented", "YAML generation with manual approval for risky response actions"],
+            ["DeepSpeed / LoRA", "Research extension", "Scaffolding only unless validated on real GPU hardware"],
+        ], columns=["Area", "Status", "Reviewer signal"])
+    else:
+        modules = pd.DataFrame([
+            ["检测分析", "已实现", "SSH 暴力破解、SQL 注入、扫描和 C2 类指标"],
+            ["RAG 回退", "已实现", "本地知识检索保证无模型服务时也能演示"],
+            ["FastAPI", "已实现", "健康检查、问答、日志分析、IOC、攻击链、RAG 和 SOAR 接口"],
+            ["SOAR", "已实现", "生成带人工审批机制的 YAML 响应剧本"],
+            ["DeepSpeed / LoRA", "研究扩展", "仅作为实验接口，不夸大为生产级训练平台"],
+        ], columns=["能力域", "状态", "面试官可观察信号"])
     st.dataframe(modules, use_container_width=True, hide_index=True)
 
 def render_dashboard():
@@ -1911,30 +2480,30 @@ def render_dashboard():
     pending = sum(1 for item in st.session_state.incidents if item["状态"] in ["待处理", "待确认", "处理中"])
 
     if high >= 3:
-        threat_level = "Critical"
-        threat_desc = "Multiple high-risk findings are open. Prioritize evidence review and containment planning."
+        threat_level = tr("critical")
+        threat_desc = tr("critical_desc")
     elif high >= 1:
-        threat_level = "High"
-        threat_desc = "High-risk evidence exists. Confirm source, affected host and successful access traces."
+        threat_level = tr("high")
+        threat_desc = tr("high_desc")
     elif middle >= 1:
-        threat_level = "Medium"
-        threat_desc = "Medium-risk findings exist. Continue correlation and watch for repeat activity."
+        threat_level = tr("medium")
+        threat_desc = tr("medium_desc")
     else:
-        threat_level = "Low"
-        threat_desc = "No obvious high-risk finding in the current local history."
+        threat_level = tr("low")
+        threat_desc = tr("low_desc")
 
     st.markdown(
         f"""
 <div class="workbench-panel">
-    <div class="panel-label">Operations Dashboard</div>
-    <div class="panel-title">Current posture: {threat_level}</div>
+    <div class="panel-label">{tr("dashboard_label")}</div>
+    <div class="panel-title">{tr("dashboard_title")}: {threat_level}</div>
     <div class="panel-copy">{threat_desc}</div>
 </div>
 <div class="metric-row" style="margin-top:14px;">
-    <div class="metric-tile"><div class="metric-label">Total analyses</div><div class="metric-value">{total}</div><div class="metric-note">history records</div></div>
-    <div class="metric-tile"><div class="metric-label">High risk</div><div class="metric-value">{high}</div><div class="metric-note">needs triage</div></div>
-    <div class="metric-tile"><div class="metric-label">Medium risk</div><div class="metric-value">{middle}</div><div class="metric-note">monitor / correlate</div></div>
-    <div class="metric-tile"><div class="metric-label">Open incidents</div><div class="metric-value">{pending}</div><div class="metric-note">not closed</div></div>
+    <div class="metric-tile"><div class="metric-label">{tr("total_analyses")}</div><div class="metric-value">{total}</div><div class="metric-note">{tr("metric_history")}</div></div>
+    <div class="metric-tile"><div class="metric-label">{tr("high_risk")}</div><div class="metric-value">{high}</div><div class="metric-note">{tr("metric_triage")}</div></div>
+    <div class="metric-tile"><div class="metric-label">{tr("medium_risk")}</div><div class="metric-value">{middle}</div><div class="metric-note">{tr("metric_correlate")}</div></div>
+    <div class="metric-tile"><div class="metric-label">{tr("open_incidents")}</div><div class="metric-value">{pending}</div><div class="metric-note">{tr("not_closed")}</div></div>
 </div>
         """,
         unsafe_allow_html=True,
@@ -1944,29 +2513,39 @@ def render_dashboard():
     incident_df = get_incident_df()
 
     if df.empty:
-        st.info("No local history yet. Load demo data or run log analysis, SOAR generation, or traffic explanation first.")
+        st.info(tr("no_history"))
         return
 
     st.markdown('<div class="ops-grid">', unsafe_allow_html=True)
     left, right = st.columns([0.95, 1.05])
     with left:
-        st.markdown("#### Incident queue")
+        st.markdown(f"#### {tr('incident_queue')}")
         if incident_df.empty:
-            st.caption("No incidents yet.")
+            st.caption(tr("no_incidents"))
         else:
             display_cols = ["事件编号", "事件类型", "风险等级", "状态", "摘要"]
-            st.dataframe(incident_df[display_cols].head(8), use_container_width=True, hide_index=True)
+            incident_display = incident_df[display_cols].head(8).copy()
+            if lang() == "en":
+                incident_display = incident_display.rename(columns={
+                    "事件编号": "Incident ID",
+                    "事件类型": "Type",
+                    "风险等级": "Risk",
+                    "状态": "Status",
+                    "摘要": "Summary",
+                })
+                incident_display["Risk"] = incident_display["Risk"].map(risk_label)
+            st.dataframe(incident_display, use_container_width=True, hide_index=True)
 
     with right:
-        st.markdown("#### Recent analysis records")
+        st.markdown(f"#### {tr('recent_records')}")
         for item in st.session_state.history[:6]:
             risk = item.get("风险等级", "低危")
             risk_class = "risk-high" if risk == "高危" else "risk-medium" if risk in ["中高危", "中危"] else "risk-low"
             st.markdown(
                 f"""
 <div class="event-row">
-    <div class="{risk_class}">{risk}</div>
-    <div><div class="event-type">{item.get('模块', '')}</div><div class="event-summary">{item.get('摘要', '')}</div></div>
+    <div class="{risk_class}">{risk_label(risk)}</div>
+    <div><div class="event-type">{page_label(item.get('模块', ''))}</div><div class="event-summary">{item.get('摘要', '')}</div></div>
     <div class="small-muted">{item.get('时间', '')[-8:]}</div>
 </div>
                 """,
@@ -1979,16 +2558,25 @@ def render_dashboard():
     with col_left:
         module_count = df["模块"].value_counts().reset_index()
         module_count.columns = ["模块", "次数"]
-        fig = px.bar(module_count, x="模块", y="次数", title="Module usage", color="次数", color_continuous_scale=["#334155", "#0ea5e9"], template=chart_template)
-        fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", font_color="#94a3b8", title_font_color="#e2e8f0")
+        module_count["显示模块"] = module_count["模块"].map(page_label)
+        fig = px.bar(module_count, x="显示模块", y="次数", title=tr("module_usage"), color="次数", color_continuous_scale=["#4a4031", "#c9a45c"], template=chart_template)
+        fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", font_color="#a79b87", title_font_color="#f4ead8")
+        fig.update_xaxes(title=None, gridcolor="rgba(214,184,120,0.10)")
+        fig.update_yaxes(title=None, gridcolor="rgba(214,184,120,0.10)")
         st.plotly_chart(fig, use_container_width=True)
 
     with col_right:
         risk_count = df["风险等级"].value_counts().reset_index()
         risk_count.columns = ["风险等级", "数量"]
-        color_map = {"高危": "#f87171", "中高危": "#fbbf24", "中危": "#fbbf24", "低危": "#4ade80"}
-        fig = px.bar(risk_count, x="风险等级", y="数量", title="Risk distribution", color="风险等级", color_discrete_map=color_map, template=chart_template)
-        fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", font_color="#94a3b8", title_font_color="#e2e8f0", showlegend=False)
+        risk_count["显示风险"] = risk_count["风险等级"].map(risk_label)
+        color_map = {
+            "高危": "#b96150", "中高危": "#d1a34f", "中危": "#d1a34f", "低危": "#8fa06c",
+            "High": "#b96150", "Medium-High": "#d1a34f", "Medium": "#d1a34f", "Low": "#8fa06c",
+        }
+        fig = px.bar(risk_count, x="显示风险", y="数量", title=tr("risk_distribution"), color="显示风险", color_discrete_map=color_map, template=chart_template)
+        fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", font_color="#a79b87", title_font_color="#f4ead8", showlegend=False)
+        fig.update_xaxes(title=None, gridcolor="rgba(214,184,120,0.10)")
+        fig.update_yaxes(title=None, gridcolor="rgba(214,184,120,0.10)")
         st.plotly_chart(fig, use_container_width=True)
 
 def render_chatbot():
