@@ -1,0 +1,9 @@
+May 11 10:01:02 server sshd[1001]: Failed password for root from 8.8.8.8 port 53422 ssh2
+May 11 10:01:06 server sshd[1002]: Failed password for admin from 8.8.8.8 port 53423 ssh2
+May 11 10:01:10 server sshd[1003]: Failed password for test from 8.8.8.8 port 53424 ssh2
+May 11 10:01:14 server sshd[1004]: Failed password for root from 8.8.8.8 port 53425 ssh2
+May 11 10:02:22 web nginx: 1.2.3.4 - - "GET /login.php?id=1' OR '1'='1 HTTP/1.1" 200
+May 11 10:03:11 firewall: SRC=5.5.5.5 DST=192.168.1.10 DPT=22 ACTION=DENY
+May 11 10:03:12 firewall: SRC=5.5.5.5 DST=192.168.1.10 DPT=80 ACTION=DENY
+May 11 10:03:13 firewall: SRC=5.5.5.5 DST=192.168.1.10 DPT=443 ACTION=DENY
+May 11 10:03:14 firewall: SRC=5.5.5.5 DST=192.168.1.10 DPT=3306 ACTION=DENY

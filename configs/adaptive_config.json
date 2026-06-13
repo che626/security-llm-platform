@@ -1,0 +1,65 @@
+{
+  "_description": "自适应配置模板 - 系统会根据模型和硬件自动填充",
+  "_usage": "此文件为模板，实际配置由 AdaptiveConfigGenerator 自动生成",
+
+  "model": {
+    "name": "auto",
+    "size_billions": "auto",
+    "num_layers": "auto",
+    "hidden_size": "auto"
+  },
+
+  "hardware": {
+    "num_gpus": "auto",
+    "gpu_type": "auto",
+    "gpu_memory_gb": "auto",
+    "cpu_memory_gb": "auto",
+    "nvme_available": "auto"
+  },
+
+  "training": {
+    "task_type": "finetune",
+    "num_epochs": 3,
+    "learning_rate": 2e-5,
+    "warmup_steps": 100,
+    "max_seq_length": 512
+  },
+
+  "deepspeed": {
+    "zero_stage": "auto",
+    "offload_optimizer": "auto",
+    "offload_param": "auto",
+    "gradient_accumulation_steps": "auto",
+    "micro_batch_size": "auto"
+  },
+
+  "optimizations": {
+    "adaptive_checkpoint": true,
+    "communication_optimization": true,
+    "hotness_aware_offload": true,
+    "dynamic_batch_size": true
+  },
+
+  "auto_selection_rules": {
+    "model_lt_4gb_and_memory_sufficient": {
+      "zero_stage": 1,
+      "offload_optimizer": false,
+      "offload_param": false
+    },
+    "model_4gb_to_16gb": {
+      "zero_stage": 2,
+      "offload_optimizer": false,
+      "offload_param": false
+    },
+    "model_16gb_to_30gb": {
+      "zero_stage": 3,
+      "offload_optimizer": false,
+      "offload_param": false
+    },
+    "model_gt_30gb": {
+      "zero_stage": 3,
+      "offload_optimizer": true,
+      "offload_param": true
+    }
+  }
+}

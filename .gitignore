@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local IDE / OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Runtime data and generated outputs
+outputs/
+logs/
+*.log
+!examples/*.log
+*.sqlite
+*.sqlite3
+*.db
+data/vector_db/
+data/*.db
+
+# Local planning / mockup scratch files
+.superpowers/
+
+# Local historical backups kept out of the polished public repository
+legacy/
+streamlit_app_v*_working.py
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Model artifacts and training checkpoints
+checkpoints/
+models/
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.onnx
+
+# Build and package artifacts
+build/
+dist/
+*.egg-info/
