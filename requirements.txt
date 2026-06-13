@@ -20,3 +20,6 @@ structlog>=23.2.0
 python-multipart>=0.0.6
 aiofiles>=23.2.0
 psutil>=5.9.0
+
+# Test runner used by CI and local release checks.
+pytest>=8.0.0

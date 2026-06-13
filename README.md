@@ -1,35 +1,47 @@
 # Security LLM Platform
 
-SOC-oriented AI security analysis platform with RAG, SOAR playbook generation, ATT&CK mapping, FastAPI backend, and Streamlit dashboard.
+A defensive AI security analysis workbench for SOC-style triage: raw logs go in, evidence, IOCs, RAG context, attack-chain notes, SOAR playbooks and reports come out.
 
-> Portfolio positioning: this is a defensive security AI demo designed to show product thinking, backend API design, RAG-assisted analysis, and operational security workflows. It runs locally by default and does not require a deployed LLM.
+> Built as an AI security / backend portfolio project. The default path runs locally without an LLM server, while FastAPI endpoints and optional model hooks show how the workflow can be extended.
 
-## Highlights
+## Why This Project Exists
 
-- **SOC AI command center**: Streamlit dashboard for threat posture, module navigation, incident state, and report export.
-- **Defensive log analysis**: identifies SSH brute force, SQL injection, port scanning, suspicious C2-like traffic, and IOC indicators.
-- **RAG-assisted answers**: combines a local security knowledge base with rule-based prompt templates; optional Ollama or OpenAI-compatible API integration is supported.
-- **SOAR playbook generation**: converts natural-language response requirements into YAML playbooks with manual approval for risky actions.
-- **ATT&CK mapping**: maps observed behavior to MITRE ATT&CK-style techniques for cleaner incident reporting.
-- **FastAPI backend**: exposes health, chat, log analysis, flow analysis, IOC extraction, attack-chain analysis, RAG retrieval, and SOAR endpoints.
-- **Research extension**: includes DeepSpeed ZeRO / LoRA experiment scaffolding and training utilities, presented as an optional research path rather than a production claim.
+Security AI demos often stop at a chat box. This project focuses on the workflow an analyst or backend reviewer can inspect:
+
+1. preserve the input evidence,
+2. explain why a finding was raised,
+3. retrieve local security knowledge as a stable fallback,
+4. expose the same behavior through APIs,
+5. generate response plans without executing destructive actions.
+
+## Reviewer Signals
+
+- **Backend/API**: FastAPI endpoints for health, chat, log analysis, IOC extraction, attack-chain analysis, RAG retrieval and SOAR simulation.
+- **AI safety boundary**: default rule + RAG fallback; optional model providers are enhancement, not a dependency.
+- **Security workflow**: SSH brute force, SQL injection, scan and C2-like findings are linked to evidence and response suggestions.
+- **Automation discipline**: SOAR playbooks are YAML, simulated, and approval-aware for risky actions.
+- **Maintainability**: CI, pytest coverage, release checks, docs and explicit limitations are included.
+- **Research extension**: DeepSpeed ZeRO / LoRA scaffolding is documented as future experimental work, not overstated as production training.
 
 ## Screenshots
 
-The app is designed around a dark SOC console aesthetic.
+The app is intentionally moving away from a flashy AI dashboard toward a denser analyst workbench.
 
 ![Login screen](docs/assets/login.png)
 
-Recommended screenshots to add after first run:
+![FastAPI docs](docs/assets/api-docs.png)
+
+Additional screenshots are generated during local review:
 
 ```text
+docs/assets/workbench.png
 docs/assets/dashboard.png
 docs/assets/log-analysis.png
 docs/assets/soar.png
-docs/assets/report-export.png
+docs/assets/api-docs.png
 ```
 
-Suggested capture flow: login page -> load demo data -> dashboard -> log analyzer -> SOAR generator -> report export.
+Suggested review flow: login -> load demo data -> workbench -> dashboard -> log analyzer -> SOAR generator -> FastAPI docs.
 
 ## Architecture
 
@@ -133,9 +145,10 @@ More detail: [docs/API.md](docs/API.md)
 
 ```powershell
 python scripts/check_project.py
+pytest -q
 ```
 
-This checks Python syntax, core smoke tests, risky repository artifacts, and common secret patterns.
+These checks cover Python syntax, core smoke tests, API behavior, risky repository artifacts and common secret patterns.
 
 ## Defensive Security Boundary
 

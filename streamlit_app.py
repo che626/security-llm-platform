@@ -1058,6 +1058,138 @@ hr { border-color: rgba(56,189,248,0.1) !important; margin: 1.5rem 0; }
 .small-muted { color: #64748b; font-size: 13px; }
 .big-number { font-size: 36px; font-weight: 800; color: #38bdf8; }
 
+
+/* ===== PROFESSIONAL WORKBENCH REFINEMENTS ===== */
+.login-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(360px, 0.8fr);
+    gap: 28px;
+    align-items: stretch;
+    margin: 28px 0 18px;
+}
+.login-panel {
+    background: rgba(15,23,42,0.72);
+    border: 1px solid rgba(148,163,184,0.16);
+    border-radius: 12px;
+    padding: 28px;
+}
+.login-heading {
+    color: #f8fafc;
+    font-size: 34px;
+    line-height: 1.12;
+    font-weight: 850;
+    letter-spacing: 0;
+    margin-bottom: 12px;
+}
+.login-copy { color: #94a3b8; font-size: 15px; line-height: 1.75; }
+.workflow-list { display: grid; gap: 10px; margin-top: 20px; }
+.workflow-row {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 14px;
+    padding: 12px 0;
+    border-top: 1px solid rgba(148,163,184,0.12);
+}
+.workflow-id { color: #38bdf8; font-size: 12px; font-weight: 800; letter-spacing: 1px; }
+.workflow-title { color: #e2e8f0; font-weight: 750; margin-bottom: 3px; }
+.workflow-copy { color: #94a3b8; font-size: 13px; line-height: 1.55; }
+.account-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 16px;
+}
+.account-pill {
+    border: 1px solid rgba(148,163,184,0.14);
+    background: rgba(2,6,23,0.34);
+    border-radius: 10px;
+    padding: 10px;
+    color: #94a3b8;
+    font-size: 12px;
+}
+.account-pill strong { color: #e2e8f0; display: block; margin-bottom: 3px; }
+.workbench-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
+    gap: 18px;
+    margin-bottom: 22px;
+}
+.workbench-panel {
+    background: rgba(15,23,42,0.68);
+    border: 1px solid rgba(148,163,184,0.14);
+    border-radius: 12px;
+    padding: 20px;
+}
+.panel-label {
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+.panel-title { color: #f8fafc; font-size: 20px; font-weight: 820; margin-bottom: 8px; }
+.panel-copy { color: #94a3b8; font-size: 14px; line-height: 1.65; }
+.evidence-table { display: grid; gap: 8px; margin-top: 14px; }
+.evidence-row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 12px;
+    padding: 10px 12px;
+    border: 1px solid rgba(148,163,184,0.12);
+    background: rgba(2,6,23,0.30);
+    border-radius: 9px;
+}
+.evidence-key { color: #64748b; font-size: 12px; font-weight: 800; }
+.evidence-value { color: #cbd5e1; font-size: 13px; line-height: 1.55; }
+.next-step-list { display: grid; gap: 8px; margin-top: 12px; }
+.next-step {
+    border-left: 3px solid rgba(56,189,248,0.55);
+    background: rgba(56,189,248,0.05);
+    padding: 10px 12px;
+    border-radius: 0 9px 9px 0;
+    color: #cbd5e1;
+    font-size: 13px;
+}
+.metric-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 18px;
+}
+.metric-tile {
+    background: rgba(15,23,42,0.72);
+    border: 1px solid rgba(148,163,184,0.14);
+    border-radius: 10px;
+    padding: 15px 16px;
+}
+.metric-label { color: #64748b; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 800; }
+.metric-value { color: #f8fafc; font-size: 26px; font-weight: 850; margin-top: 6px; }
+.metric-note { color: #94a3b8; font-size: 12px; margin-top: 4px; }
+.ops-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: 18px;
+    margin-bottom: 20px;
+}
+.event-row {
+    display: grid;
+    grid-template-columns: 90px 1fr 72px;
+    gap: 12px;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid rgba(148,163,184,0.12);
+}
+.event-type { color: #e2e8f0; font-size: 13px; font-weight: 750; }
+.event-summary { color: #94a3b8; font-size: 12px; line-height: 1.45; }
+.risk-high { color: #f87171; font-weight: 800; }
+.risk-medium { color: #fbbf24; font-weight: 800; }
+.risk-low { color: #4ade80; font-weight: 800; }
+@media (max-width: 960px) {
+    .login-shell, .workbench-grid, .ops-grid { grid-template-columns: 1fr; }
+    .metric-row, .account-strip { grid-template-columns: 1fr 1fr; }
+}
+
 /* ===== ANIMATED NOTIFICATION FEED ===== */
 .notif-item {
     display: flex;
@@ -1438,162 +1570,60 @@ def build_full_report():
 def render_login_page():
     st.markdown(
         """
-<div class="login-hero">
-    <div class="login-title">Security LLM Platform</div>
-    <div class="login-subtitle">SOC AI Command Center with RAG, SOAR, ATT&CK Mapping and FastAPI</div>
-    <div class="login-badge">Defensive Security Operations Portfolio</div>
-</div>
-        """,
-        unsafe_allow_html=True
+<div class="login-shell">
+    <div class="login-panel">
+        <div class="panel-label">Portfolio system for AI security / backend interviews</div>
+        <div class="login-heading">Security analysis workbench, not another chatbot demo.</div>
+        <div class="login-copy">
+            This project demonstrates a defensive SOC workflow: raw logs go in, evidence and IOCs come out, RAG adds security context, and SOAR playbooks stay simulated with manual approval. The backend exposes the same workflow through FastAPI so reviewers can inspect both product behavior and engineering boundaries.
+        </div>
+        <div class="workflow-list">
+            <div class="workflow-row"><div class="workflow-id">STEP 01</div><div><div class="workflow-title">Ingest evidence</div><div class="workflow-copy">Paste SSH, web, firewall, DNS or IDS-like logs and keep the original evidence visible.</div></div></div>
+            <div class="workflow-row"><div class="workflow-id">STEP 02</div><div><div class="workflow-title">Detect and explain</div><div class="workflow-copy">Classify brute force, SQL injection, scans and C2-like behavior with readable reasons.</div></div></div>
+            <div class="workflow-row"><div class="workflow-id">STEP 03</div><div><div class="workflow-title">Retrieve context</div><div class="workflow-copy">Use local RAG knowledge as the default fallback before optional model providers are introduced.</div></div></div>
+            <div class="workflow-row"><div class="workflow-id">STEP 04</div><div><div class="workflow-title">Plan response</div><div class="workflow-copy">Generate SOAR YAML, require approval for risky actions, and export incident reports.</div></div></div>
+        </div>
+    </div>
+    <div class="login-panel">
+        <div class="panel-label">Local demo access</div>
+        <div class="panel-title">Sign in</div>
+        <div class="panel-copy">Demo credentials are intentionally documented for reproducible review. They are not a production authentication model.</div>
+""",
+        unsafe_allow_html=True,
     )
+    username = st.text_input("Account", placeholder="admin / analyst / researcher")
+    password = st.text_input("Password", type="password", placeholder="Demo password")
+    login_btn = st.button("Open analyst workbench", use_container_width=True, type="primary")
+    if login_btn:
+        if username in USERS and USERS[username]["password"] == password:
+            st.session_state.logged_in = True
+            st.session_state.username = username
+            st.session_state.role = USERS[username]["role"]
+            st.success("Login successful. Opening workbench...")
+            st.rerun()
+        else:
+            st.error("Invalid demo account or password.")
 
     st.markdown(
         """
-<div style="display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:28px;">
-    <div class="glass-card" style="text-align:center; padding:20px 14px;">
-        <div class="feature-icon icon-blue" style="margin:0 auto 10px;">&#x1F50D;</div>
-        <div style="font-weight:700; color:#f1f5f9; font-size:14px; margin-bottom:4px;">日志智能分析</div>
-        <div class="small-muted">SSH 暴力破解 / SQL 注入 / 端口扫描</div>
+        <div class="account-strip">
+            <div class="account-pill"><strong>admin</strong>Admin#2026</div>
+            <div class="account-pill"><strong>analyst</strong>Analyst#2026</div>
+            <div class="account-pill"><strong>researcher</strong>Research#2026</div>
+        </div>
     </div>
-    <div class="glass-card" style="text-align:center; padding:20px 14px;">
-        <div class="feature-icon icon-green" style="margin:0 auto 10px;">&#x1F916;</div>
-        <div style="font-weight:700; color:#f1f5f9; font-size:14px; margin-bottom:4px;">AI 安全助手</div>
-        <div class="small-muted">RAG 知识库 + 大模型问答</div>
-    </div>
-    <div class="glass-card" style="text-align:center; padding:20px 14px;">
-        <div class="feature-icon icon-amber" style="margin:0 auto 10px;">&#x26A1;</div>
-        <div style="font-weight:700; color:#f1f5f9; font-size:14px; margin-bottom:4px;">SOAR 自动响应</div>
-        <div class="small-muted">YAML 剧本生成 / 模拟运行</div>
-    </div>
-    <div class="glass-card" style="text-align:center; padding:20px 14px;">
-        <div class="feature-icon icon-purple" style="margin:0 auto 10px;">&#x1F4CA;</div>
-        <div style="font-weight:700; color:#f1f5f9; font-size:14px; margin-bottom:4px;">安全态势仪表盘</div>
-        <div class="small-muted">风险指标 / 事件分布 / 趋势分析</div>
-    </div>
-    <div class="glass-card" style="text-align:center; padding:20px 14px;">
-        <div class="feature-icon icon-red" style="margin:0 auto 10px;">&#x1F6E1;</div>
-        <div style="font-weight:700; color:#f1f5f9; font-size:14px; margin-bottom:4px;">IOC 威胁提取</div>
-        <div class="small-muted">IP / 域名 / 端口 / 攻击关键词</div>
-    </div>
-    <div class="glass-card" style="text-align:center; padding:20px 14px;">
-        <div class="feature-icon icon-cyan" style="margin:0 auto 10px;">&#x1F517;</div>
-        <div style="font-weight:700; color:#f1f5f9; font-size:14px; margin-bottom:4px;">攻击链分析</div>
-        <div class="small-muted">侦察 / 漏洞利用 / C2 外联</div>
-    </div>
-    <div class="glass-card" style="text-align:center; padding:20px 14px;">
-        <div class="feature-icon icon-blue" style="margin:0 auto 10px;">&#x1F4DA;</div>
-        <div style="font-weight:700; color:#f1f5f9; font-size:14px; margin-bottom:4px;">RAG 知识库</div>
-        <div class="small-muted">安全知识检索与增强</div>
-    </div>
-    <div class="glass-card" style="text-align:center; padding:20px 14px;">
-        <div class="feature-icon icon-green" style="margin:0 auto 10px;">&#x1F9EA;</div>
-        <div style="font-weight:700; color:#f1f5f9; font-size:14px; margin-bottom:4px;">ZeRO 微调实验</div>
-        <div class="small-muted">DeepSpeed 显存优化展示</div>
+</div>
+<div class="workbench-panel" style="margin-top:14px;">
+    <div class="panel-label">Implementation signals</div>
+    <div class="evidence-table">
+        <div class="evidence-row"><div class="evidence-key">Frontend</div><div class="evidence-value">Streamlit analyst console with stable local fallback behavior.</div></div>
+        <div class="evidence-row"><div class="evidence-key">Backend</div><div class="evidence-value">FastAPI endpoints for chat, log analysis, IOC extraction, RAG retrieval and SOAR simulation.</div></div>
+        <div class="evidence-row"><div class="evidence-key">Boundary</div><div class="evidence-value">Defensive analysis only; generated response actions are simulated and approval-aware.</div></div>
     </div>
 </div>
         """,
-        unsafe_allow_html=True
+        unsafe_allow_html=True,
     )
-
-    col_left, col_center, col_right = st.columns([1, 1.2, 1])
-    with col_center:
-        st.markdown(
-            """
-<div class="glass-card" style="border-color:rgba(74,222,128,0.2); padding:30px 28px;">
-    <div style="text-align:center; margin-bottom:20px;">
-        <div style="font-size:32px; margin-bottom:8px;">&#x1F511;</div>
-        <div style="font-size:18px; font-weight:700; color:#f1f5f9;">系统登录</div>
-        <div class="small-muted">请输入您的账号和密码</div>
-    </div>
-            """,
-            unsafe_allow_html=True
-        )
-        username = st.text_input("账号", placeholder="请输入账号")
-        password = st.text_input("密码", type="password", placeholder="请输入密码")
-        login_btn = st.button("登录系统", use_container_width=True, type="primary")
-        if login_btn:
-            if username in USERS and USERS[username]["password"] == password:
-                st.session_state.logged_in = True
-                st.session_state.username = username
-                st.session_state.role = USERS[username]["role"]
-                st.success("登录成功，正在跳转...")
-                st.rerun()
-            else:
-                st.error("账号或密码错误，请重新输入。")
-        st.markdown("</div>", unsafe_allow_html=True)
-
-    st.markdown(
-        """
-<div style="margin-top:24px;">
-    <div class="section-header">
-        <span class="section-icon">&#x1F4CB;</span>
-        <span class="section-title">Test Accounts</span>
-    </div>
-</div>
-        """,
-        unsafe_allow_html=True
-    )
-    acct1, acct2, acct3 = st.columns(3)
-    with acct1:
-        st.markdown(
-            """
-<div class="glass-card" style="text-align:center; padding:18px;">
-    <div style="font-size:24px; margin-bottom:6px;">&#x1F451;</div>
-    <div style="font-weight:700; color:#f1f5f9; margin-bottom:4px;">管理员</div>
-    <div class="small-muted" style="margin-bottom:8px;">系统管理员，可访问全部模块</div>
-    <code style="background:rgba(56,189,248,0.1); padding:4px 10px; border-radius:6px; color:#38bdf8; font-size:12px;">admin</code>
-</div>
-            """,
-            unsafe_allow_html=True
-        )
-    with acct2:
-        st.markdown(
-            """
-<div class="glass-card" style="text-align:center; padding:18px;">
-    <div style="font-size:24px; margin-bottom:6px;">&#x1F6E1;</div>
-    <div style="font-weight:700; color:#f1f5f9; margin-bottom:4px;">安全分析师</div>
-    <div class="small-muted" style="margin-bottom:8px;">安全分析人员，可访问分析和响应模块</div>
-    <code style="background:rgba(74,222,128,0.1); padding:4px 10px; border-radius:6px; color:#4ade80; font-size:12px;">analyst</code>
-</div>
-            """,
-            unsafe_allow_html=True
-        )
-    with acct3:
-        st.markdown(
-            """
-<div class="glass-card" style="text-align:center; padding:18px;">
-    <div style="font-size:24px; margin-bottom:6px;">&#x1F52C;</div>
-    <div style="font-weight:700; color:#f1f5f9; margin-bottom:4px;">研究人员</div>
-    <div class="small-muted" style="margin-bottom:8px;">研究人员，可访问训练和实验模块</div>
-    <code style="background:rgba(167,139,250,0.1); padding:4px 10px; border-radius:6px; color:#a78bfa; font-size:12px;">researcher</code>
-</div>
-            """,
-            unsafe_allow_html=True
-        )
-
-    st.markdown(
-        """
-<div class="glass-card" style="margin-top:20px; padding:24px;">
-    <div class="section-header" style="margin-bottom:16px;">
-        <span class="section-icon">&#x1F3D7;</span>
-        <span class="section-title">System Architecture</span>
-    </div>
-    <div class="arch-flow">
-        <div class="arch-node">&#x1F310; Streamlit<br><span class="small-muted">前端界面</span></div>
-        <span class="arch-arrow">&#x27A1;</span>
-        <div class="arch-node">&#x2699; FastAPI<br><span class="small-muted">后端服务</span></div>
-        <span class="arch-arrow">&#x27A1;</span>
-        <div class="arch-node">&#x1F4DA; RAG<br><span class="small-muted">知识检索</span></div>
-        <span class="arch-arrow">&#x27A1;</span>
-        <div class="arch-node">&#x1F916; Ollama<br><span class="small-muted">本地模型</span></div>
-        <span class="arch-arrow">&#x27A1;</span>
-        <div class="arch-node">&#x26A1; ZeRO<br><span class="small-muted">显存优化</span></div>
-    </div>
-</div>
-        """,
-        unsafe_allow_html=True
-    )
-
 
 def render_sidebar():
     st.sidebar.markdown(
@@ -1779,472 +1809,187 @@ python training/run_real_benchmark.py
 def render_home():
     st.markdown(
         """
-<div class="hero-banner">
-    <div style="position:relative; z-index:1;">
-        <div class="hero-kicker">SOC AI Command Center</div>
-        <div class="hero-title">Security LLM Platform</div>
-        <div class="hero-subtitle">面向安全运营场景的作品集级 AI 分析平台：集成日志研判、RAG 安全知识检索、IOC 提取、ATT&CK 映射、SOAR 剧本生成、事件闭环和报告导出。默认使用规则 + RAG 模板稳定运行，外部模型作为可选增强。</div>
-        <div class="hero-badges">
-            <span class="status-badge badge-info">Streamlit</span>
-            <span class="status-badge badge-info">FastAPI</span>
-            <span class="status-badge badge-success">Rules + RAG fallback</span>
-            <span class="status-badge badge-warning">SOAR simulation</span>
-            <span class="status-badge badge-info">DeepSpeed extension</span>
+<div class="workbench-grid">
+    <div class="workbench-panel">
+        <div class="panel-label">Analyst Workbench</div>
+        <div class="panel-title">From raw evidence to response plan</div>
+        <div class="panel-copy">This screen is the review path for an AI security / backend interview: it shows the input, detection reason, RAG fallback, API boundary and response output in one place.</div>
+        <div class="evidence-table">
+            <div class="evidence-row"><div class="evidence-key">Sample input</div><div class="evidence-value">SSH failed passwords, SQL injection probe, firewall deny records and suspicious HTTP callback summary.</div></div>
+            <div class="evidence-row"><div class="evidence-key">Detection</div><div class="evidence-value">Rules identify brute force, SQL injection, port scan and C2-like behavior with visible evidence.</div></div>
+            <div class="evidence-row"><div class="evidence-key">RAG fallback</div><div class="evidence-value">Local security knowledge is used by default, so the project remains demoable without an external LLM.</div></div>
+            <div class="evidence-row"><div class="evidence-key">API surface</div><div class="evidence-value">FastAPI exposes the same workflow through documented endpoints for backend review.</div></div>
+        </div>
+    </div>
+    <div class="workbench-panel">
+        <div class="panel-label">Recommended next actions</div>
+        <div class="next-step-list">
+            <div class="next-step">Load demo data, then open the dashboard to inspect incident state.</div>
+            <div class="next-step">Run log analysis and verify the evidence list before reading the generated report.</div>
+            <div class="next-step">Open SOAR generation and confirm risky actions require manual approval.</div>
+            <div class="next-step">Open FastAPI /docs to inspect endpoint contracts.</div>
         </div>
     </div>
 </div>
         """,
-        unsafe_allow_html=True
+        unsafe_allow_html=True,
     )
 
-    # 新手提示
     if not st.session_state.get("demo_loaded", False):
-        st.markdown("""
-<div class="page-guide" style="border-color:rgba(74,222,128,0.3); background:rgba(74,222,128,0.05);">
-    <div class="page-guide-title" style="color:#4ade80;">&#x1F4A1; 新手提示</div>
-    <div style="color:#94a3b8; font-size:13px; line-height:1.8;">
-        <b>第一次使用？</b> 点击左侧 <b>"加载示例数据"</b> 按钮，系统会自动创建安全事件和分析记录。<br>
-        然后可以依次体验：态势仪表盘 → 日志分析 → AI 问答 → SOAR 响应。
-    </div>
-</div>
-        """, unsafe_allow_html=True)
+        if st.button("Load demo evidence and incidents", type="primary", use_container_width=True):
+            load_demo_data()
+            st.session_state.demo_loaded = True
+            st.success("Demo data loaded.")
+            st.rerun()
 
     total = len(st.session_state.history)
     high = get_metric_count(risk_level="高危")
-    pending = sum(1 for item in st.session_state.incidents if item["状态"] in ["待处理", "待确认"])
+    pending = sum(1 for item in st.session_state.incidents if item["状态"] in ["待处理", "待确认", "处理中"])
     ai_count = get_metric_count(module_name="AI 安全助手")
 
-    col1, col2, col3, col4 = st.columns(4)
-    col1.metric("累计分析次数", total)
-    col2.metric("高危事件", high)
-    col3.metric("待处理事件", pending)
-    col4.metric("AI 问答次数", ai_count)
-
-    st.markdown("<br>", unsafe_allow_html=True)
-
     st.markdown(
-        """
-<div class="command-grid">
-    <div class="mission-panel">
-        <div class="mission-title">What this project demonstrates</div>
-        <div class="mission-text">
-            这个项目不是单一聊天机器人，而是一条安全运营工作流：从原始日志和流量摘要进入，经过检测、RAG 知识补强、IOC 和攻击链整理，再生成 SOAR 响应和可导出的事件报告。
-            前端强调可演示性，后端提供可扩展 API，研究模块展示 LoRA / DeepSpeed ZeRO 的后续方向。
-        </div>
-    </div>
-    <div class="mission-panel">
-        <div class="mission-title">Runtime signals</div>
-        <div class="signal-list">
-            <div class="signal-item"><span>Default analysis mode</span><span class="signal-value">Rules + RAG</span></div>
-            <div class="signal-item"><span>Backend dependency</span><span class="signal-value">Optional</span></div>
-            <div class="signal-item"><span>SOAR execution</span><span class="signal-value">Simulated</span></div>
-            <div class="signal-item"><span>Project posture</span><span class="signal-value">Defensive</span></div>
-        </div>
-    </div>
+        f"""
+<div class="metric-row">
+    <div class="metric-tile"><div class="metric-label">Analyses</div><div class="metric-value">{total}</div><div class="metric-note">local history entries</div></div>
+    <div class="metric-tile"><div class="metric-label">High risk</div><div class="metric-value">{high}</div><div class="metric-note">requires analyst review</div></div>
+    <div class="metric-tile"><div class="metric-label">Open incidents</div><div class="metric-value">{pending}</div><div class="metric-note">not yet closed</div></div>
+    <div class="metric-tile"><div class="metric-label">Assistant turns</div><div class="metric-value">{ai_count}</div><div class="metric-note">RAG / fallback mode</div></div>
 </div>
         """,
-        unsafe_allow_html=True
+        unsafe_allow_html=True,
     )
 
-    # Getting Started guide for new users
-    if not st.session_state.get("demo_loaded", False):
-        st.markdown(
-            """
-<div class="getting-started">
-    <h3>&#x1F680; 快速开始</h3>
-    <p style="color:#94a3b8; margin-bottom:16px;">欢迎使用智能安全分析系统！按照以下步骤快速体验系统功能：</p>
-    <div class="step-item"><div class="step-num">1</div><div><b style="color:#f1f5f9;">加载示例数据</b> <span class="small-muted">- 点击下方按钮，系统会自动生成安全事件和分析记录</span></div></div>
-    <div class="step-item"><div class="step-num">2</div><div><b style="color:#f1f5f9;">查看态势仪表盘</b> <span class="small-muted">- 了解当前安全态势、风险分布和事件趋势</span></div></div>
-    <div class="step-item"><div class="step-num">3</div><div><b style="color:#f1f5f9;">使用 AI 安全助手</b> <span class="small-muted">- 提问安全问题，获取 RAG 增强的智能分析</span></div></div>
-    <div class="step-item"><div class="step-num">4</div><div><b style="color:#f1f5f9;">分析安全日志</b> <span class="small-muted">- 粘贴日志文本，自动检测攻击类型和风险等级</span></div></div>
-    <div class="step-item"><div class="step-num">5</div><div><b style="color:#f1f5f9;">生成 SOAR 剧本</b> <span class="small-muted">- 输入响应需求，自动生成 YAML 自动化剧本</span></div></div>
-</div>
-            """,
-            unsafe_allow_html=True
-        )
+    st.markdown("### Review path")
+    action_cols = st.columns(6)
+    actions = [
+        ("Log analysis", "日志分析器"),
+        ("IOC extraction", "IOC 威胁指标提取器"),
+        ("Attack chain", "攻击链分析"),
+        ("SOAR plan", "SOAR 剧本生成器"),
+        ("Reports", "报告导出中心"),
+        ("API status", "后端服务状态"),
+    ]
+    for col, (label, page_name) in zip(action_cols, actions):
+        with col:
+            if st.button(label, use_container_width=True, key=f"workbench_{page_name}"):
+                st.session_state.current_page = page_name
+                st.rerun()
 
-        if st.button("加载示例数据", type="primary", use_container_width=True):
-            load_demo_data()
-            st.session_state.demo_loaded = True
-            st.success("示例数据已加载！")
-            st.rerun()
-
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    # Quick Actions - clickable buttons
-    st.markdown(
-        """
-<div class="section-header">
-    <span class="section-icon">&#x26A1;</span>
-    <span class="section-title">Quick Actions</span>
-</div>
-        """,
-        unsafe_allow_html=True
-    )
-
-    qa1, qa2, qa3, qa4 = st.columns(4)
-    with qa1:
-        if st.button("日志分析器", use_container_width=True, key="qa_log"):
-            st.session_state.current_page = "日志分析器"
-            st.rerun()
-    with qa2:
-        if st.button("AI 安全助手", use_container_width=True, key="qa_ai"):
-            st.session_state.current_page = "AI 安全助手"
-            st.rerun()
-    with qa3:
-        if st.button("SOAR 剧本生成", use_container_width=True, key="qa_soar"):
-            st.session_state.current_page = "SOAR 剧本生成器"
-            st.rerun()
-    with qa4:
-        if st.button("态势仪表盘", use_container_width=True, key="qa_dash"):
-            st.session_state.current_page = "安全态势仪表盘"
-            st.rerun()
-
-    qa5, qa6, qa7, qa8 = st.columns(4)
-    with qa5:
-        if st.button("IOC 威胁提取", use_container_width=True, key="qa_ioc"):
-            st.session_state.current_page = "IOC 威胁指标提取器"
-            st.rerun()
-    with qa6:
-        if st.button("攻击链分析", use_container_width=True, key="qa_chain"):
-            st.session_state.current_page = "攻击链分析"
-            st.rerun()
-    with qa7:
-        if st.button("事件处置中心", use_container_width=True, key="qa_inc"):
-            st.session_state.current_page = "事件处置中心"
-            st.rerun()
-    with qa8:
-        if st.button("报告导出", use_container_width=True, key="qa_report"):
-            st.session_state.current_page = "报告导出中心"
-            st.rerun()
-
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    # Recent activity feed with animation
     if st.session_state.get("history"):
-        st.markdown(
-            """
-<div class="section-header">
-    <span class="section-icon">&#x1F4E1;</span>
-    <span class="section-title">Recent Activity</span>
-</div>
-            """,
-            unsafe_allow_html=True
-        )
-
-        recent = st.session_state.history[:5]
-        for item in recent:
+        st.markdown("### Recent evidence trail")
+        for item in st.session_state.history[:5]:
             risk = item.get("风险等级", "低危")
-            risk_color = {"高危": "#f87171", "中高危": "#fbbf24", "中危": "#38bdf8", "低危": "#4ade80"}.get(risk, "#94a3b8")
+            risk_class = "risk-high" if risk == "高危" else "risk-medium" if risk in ["中高危", "中危"] else "risk-low"
             st.markdown(
                 f"""
-<div class="notif-item" style="border-left-color:{risk_color};">
-    <div style="font-size:18px; flex-shrink:0;">{ '&#x1F534;' if risk == '高危' else '&#x1F7E1;' if risk in ['中高危','中危'] else '&#x1F7E2;' }</div>
-    <div style="flex:1;">
-        <div style="font-weight:600; color:#f1f5f9; font-size:14px;">{item.get('模块', '')} - {item.get('事件类型', '')}</div>
-        <div class="small-muted">{item.get('摘要', '')}</div>
-        <div style="font-size:11px; color:#475569; margin-top:4px;">{item.get('时间', '')}</div>
-    </div>
-    <span class="status-badge {'badge-danger' if risk == '高危' else 'badge-warning' if risk in ['中高危','中危'] else 'badge-success'}">{risk}</span>
+<div class="event-row">
+    <div class="{risk_class}">{risk}</div>
+    <div><div class="event-type">{item.get('模块', '')} / {item.get('事件类型', '')}</div><div class="event-summary">{item.get('摘要', '')}</div></div>
+    <div class="small-muted">{item.get('时间', '')[-8:]}</div>
 </div>
                 """,
-                unsafe_allow_html=True
+                unsafe_allow_html=True,
             )
+    else:
+        st.info("No local evidence yet. Load demo data or run one analysis module to populate the workbench.")
 
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    st.markdown(
-        """
-<div class="section-header">
-    <span class="section-icon">&#x1F9E0;</span>
-    <span class="section-title">All Features - Click to Enter</span>
-</div>
-        """,
-        unsafe_allow_html=True
-    )
-
-    feature_pages = [
-        ("&#x1F50D;", "日志分析器", "粘贴日志，自动发现攻击", "分析服务器日志，找出谁在攻击你", "icon-blue", "日志分析器"),
-        ("&#x1F916;", "AI 安全助手", "像聊天一样问安全问题", "不懂安全术语？直接用大白话问 AI", "icon-green", "AI 安全助手"),
-        ("&#x26A1;", "SOAR 剧本生成", "一句话生成应急响应方案", "输入需求，自动生成处置步骤", "icon-red", "SOAR 剧本生成器"),
-        ("&#x1F4CA;", "安全态势仪表盘", "一眼看清安全全局", "风险等级、事件趋势、模块使用统计", "icon-blue", "安全态势仪表盘"),
-        ("&#x1F6E1;", "IOC 威胁提取", "从日志中揪出可疑线索", "自动提取 IP、域名、端口等威胁指标", "icon-cyan", "IOC 威胁指标提取器"),
-        ("&#x1F517;", "攻击链分析", "还原攻击者的完整路径", "从侦察到入侵，一步步还原攻击过程", "icon-purple", "攻击链分析"),
-        ("&#x1F4DA;", "RAG 知识库", "安全知识即查即用", "输入关键词，检索相关安全知识和处置建议", "icon-amber", "RAG 安全知识库"),
-        ("&#x1F4CB;", "ATT&CK 映射", "攻击行为标准化标签", "把日志特征映射到国际通用的攻击分类体系", "icon-blue", "ATT&CK 技术点映射"),
-        ("&#x1F4C8;", "事件处置中心", "安全事件跟踪管理", "查看、处置、跟踪每一个安全事件", "icon-green", "事件处置中心"),
-        ("&#x1F4E5;", "报告导出", "一键生成分析报告", "导出 Markdown / HTML / CSV 格式报告", "icon-amber", "报告导出中心"),
-        ("&#x1F9EA;", "ZeRO 微调实验", "大模型训练显存优化", "展示 DeepSpeed ZeRO 如何降低训练成本", "icon-green", "DeepSpeed ZeRO 实验展示"),
-        ("&#x1F527;", "模型配置", "接入你自己的 AI 模型", "支持 Ollama 本地模型或在线 API", "icon-purple", "模型接入配置中心"),
-    ]
-
-    for i in range(0, len(feature_pages), 4):
-        cols = st.columns(4)
-        for j, col in enumerate(cols):
-            idx = i + j
-            if idx < len(feature_pages):
-                icon, title, subtitle, desc, _, page_name = feature_pages[idx]
-                with col:
-                    if st.button(f"{icon} {title}", key=f"feat_{idx}", use_container_width=True):
-                        st.session_state.current_page = page_name
-                        st.rerun()
-                    st.caption(subtitle)
-
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    st.markdown(
-        """
-<div class="section-header">
-    <span class="section-icon">&#x1F3D7;</span>
-    <span class="section-title">System Architecture</span>
-</div>
-<div class="glass-card" style="padding:28px;">
-    <div class="arch-flow">
-        <div class="arch-node">&#x1F310; Streamlit<br><span class="small-muted">前端界面</span></div>
-        <span class="arch-arrow">&#x27A1;</span>
-        <div class="arch-node">&#x2699; FastAPI<br><span class="small-muted">后端服务</span></div>
-        <span class="arch-arrow">&#x27A1;</span>
-        <div class="arch-node">&#x1F4DA; RAG<br><span class="small-muted">知识检索</span></div>
-        <span class="arch-arrow">&#x27A1;</span>
-        <div class="arch-node">&#x1F916; Ollama<br><span class="small-muted">本地模型</span></div>
-        <span class="arch-arrow">&#x27A1;</span>
-        <div class="arch-node">&#x26A1; ZeRO<br><span class="small-muted">显存优化</span></div>
-    </div>
-</div>
-        """,
-        unsafe_allow_html=True
-    )
-
-    st.markdown(
-        """
-<div class="section-header" style="margin-top:24px;">
-    <span class="section-icon">&#x1F4CB;</span>
-    <span class="section-title">System Capability Matrix</span>
-</div>
-        """,
-        unsafe_allow_html=True
-    )
-
+    st.markdown("### Capability matrix")
     modules = pd.DataFrame([
-        ["用户登录", "已完成", "多角色账号登录、用户状态显示"],
-        ["角色权限", "已完成", "admin / judge / research 三类用户导航分流"],
-        ["安全态势仪表盘", "已完成", "风险指标、事件分布、模块使用统计"],
-        ["AI 安全助手", "增强中", "支持规则 + RAG 模板，并预留本地模型 / API 接入"],
-        ["模型接入配置中心", "新增", "配置 Ollama 本地模型或 OpenAI 兼容 API，支持失败回退"],
-        ["日志分析器", "已完成", "SSH 暴力破解、SQL 注入、端口扫描识别"],
-        ["SOAR 剧本生成器", "已完成", "自然语言生成 YAML 响应剧本"],
-        ["流量摘要解释器", "已完成", "DNS、HTTP、C2 可疑流量解释"],
-        ["IOC 威胁指标提取器", "新增", "提取 IP、域名、路径、端口、User-Agent 和攻击关键词"],
-        ["攻击链分析", "新增", "按侦察、漏洞尝试、凭证攻击、C2 外联和响应闭环组织证据"],
-        ["ATT&CK 技术点映射", "新增", "将日志特征映射到 MITRE ATT&CK 技术点，辅助论文和比赛展示"],
-        ["RAG 安全知识库", "已完成", "攻击特征与处置建议检索"],
-        ["事件处置中心", "已完成", "事件编号、风险等级、状态管理、处置建议"],
-        ["报告导出中心", "已完成", "导出 Markdown 运行报告和 CSV 历史记录"],
-        ["安全指令数据集", "已完成", "从历史记录和事件记录构造 JSONL 微调样本"],
-        ["DeepSpeed ZeRO", "增强中", "显存优化实验展示和配置生成器"]
-    ], columns=["模块", "状态", "说明"])
-
+        ["Detection", "Implemented", "SSH brute force, SQL injection, scan and C2-like indicators"],
+        ["RAG fallback", "Implemented", "Local knowledge lookup keeps the assistant usable without a model server"],
+        ["FastAPI", "Implemented", "Health, chat, log analysis, IOC, attack chain, RAG and SOAR endpoints"],
+        ["SOAR", "Implemented", "YAML generation with manual approval for risky response actions"],
+        ["DeepSpeed / LoRA", "Research extension", "Scaffolding only unless validated on real GPU hardware"],
+    ], columns=["Area", "Status", "Reviewer signal"])
     st.dataframe(modules, use_container_width=True, hide_index=True)
 
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    st.markdown(
-        """
-<div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:24px;">
-    <span class="status-badge badge-info">Python</span>
-    <span class="status-badge badge-info">Streamlit</span>
-    <span class="status-badge badge-info">FastAPI</span>
-    <span class="status-badge badge-info">Ollama</span>
-    <span class="status-badge badge-info">RAG</span>
-    <span class="status-badge badge-info">DeepSpeed ZeRO</span>
-    <span class="status-badge badge-info">Plotly</span>
-    <span class="status-badge badge-info">Pandas</span>
-    <span class="status-badge badge-info">PyYAML</span>
-</div>
-        """,
-        unsafe_allow_html=True
-    )
-
-    st.markdown(
-        """
-<div class="section-header">
-    <span class="section-icon">&#x1F3AC;</span>
-    <span class="section-title">Recommended Demo Flow</span>
-</div>
-        """,
-        unsafe_allow_html=True
-    )
-
-    flow_steps = [
-        ("01", "登录系统", "使用 admin 账号登录，查看多角色入口"),
-        ("02", "加载演示数据", "点击左侧按钮，快速生成仪表盘内容"),
-        ("03", "AI 安全助手", "提问 SSH 暴力破解、SQL 注入等问题"),
-        ("04", "日志分析器", "加载混合攻击日志样例并分析"),
-        ("05", "IOC 威胁提取", "提取 IP、域名、端口和攻击关键词"),
-        ("06", "攻击链分析", "查看攻击阶段、证据和响应建议"),
-        ("07", "ATT&CK 映射", "展示攻击行为到技术点的对应关系"),
-        ("08", "SOAR 剧本", "生成 YAML 剧本并模拟运行"),
-        ("09", "事件处置中心", "查看事件状态和处置建议"),
-        ("10", "报告导出", "导出 Markdown / HTML / CSV 报告"),
-        ("11", "ZeRO 实验", "展示 DeepSpeed 显存优化路线"),
-    ]
-
-    for step_num, title, desc in flow_steps:
-        st.markdown(
-            f"""
-<div style="display:flex; align-items:center; gap:14px; padding:8px 0; border-left:2px solid rgba(56,189,248,0.15); padding-left:18px; margin-left:8px; position:relative;">
-    <div style="position:absolute; left:-11px; top:50%; transform:translateY(-50%); width:20px; height:20px; border-radius:50%; background:rgba(56,189,248,0.15); border:2px solid rgba(56,189,248,0.4); display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; color:#38bdf8;">{step_num}</div>
-    <div style="font-weight:700; color:#f1f5f9; min-width:120px;">{title}</div>
-    <div class="small-muted">{desc}</div>
-</div>
-            """,
-            unsafe_allow_html=True
-        )
-
-
 def render_dashboard():
-    st.markdown(
-        """
-<div class="hero-banner" style="padding:24px 30px; margin-bottom:24px;">
-    <div style="position:relative; z-index:1;">
-        <div style="font-size:13px; font-weight:700; color:#38bdf8; text-transform:uppercase; letter-spacing:2px; margin-bottom:6px;">Security Dashboard</div>
-        <div style="font-size:28px; font-weight:900; color:#f1f5f9;">安全态势仪表盘</div>
-    </div>
-</div>
-        """,
-        unsafe_allow_html=True
-    )
-
     total = len(st.session_state.history)
     high = get_metric_count(risk_level="高危")
     middle = get_metric_count(risk_level="中危") + get_metric_count(risk_level="中高危")
     low = get_metric_count(risk_level="低危")
     pending = sum(1 for item in st.session_state.incidents if item["状态"] in ["待处理", "待确认", "处理中"])
 
-    col1, col2, col3, col4 = st.columns(4)
-    col1.metric("累计分析次数", total)
-    col2.metric("高危事件", high)
-    col3.metric("中危事件", middle)
-    col4.metric("未闭环事件", pending)
-
     if high >= 3:
-        threat_level = "CRITICAL"
-        threat_color = "#f87171"
-        threat_desc = "当前高危事件较多，建议安全人员立即介入排查，优先处理暴力破解、SQL 注入和可疑 C2 回连。"
+        threat_level = "Critical"
+        threat_desc = "Multiple high-risk findings are open. Prioritize evidence review and containment planning."
     elif high >= 1:
-        threat_level = "HIGH"
-        threat_color = "#fbbf24"
-        threat_desc = "当前存在高危事件，建议优先确认攻击来源、影响主机和是否存在成功入侵痕迹。"
+        threat_level = "High"
+        threat_desc = "High-risk evidence exists. Confirm source, affected host and successful access traces."
     elif middle >= 1:
-        threat_level = "MEDIUM"
-        threat_color = "#38bdf8"
-        threat_desc = "当前存在中危事件，建议持续观察日志和流量变化。"
+        threat_level = "Medium"
+        threat_desc = "Medium-risk findings exist. Continue correlation and watch for repeat activity."
     else:
-        threat_level = "LOW"
-        threat_color = "#4ade80"
-        threat_desc = "当前未发现明显高危事件，系统处于相对平稳状态。"
+        threat_level = "Low"
+        threat_desc = "No obvious high-risk finding in the current local history."
 
     st.markdown(
         f"""
-<div class="glass-card" style="display:flex; align-items:center; gap:20px; padding:20px 28px; border-left:4px solid {threat_color};">
-    <div style="font-size:36px; font-weight:900; color:{threat_color}; min-width:120px; letter-spacing:2px;">{threat_level}</div>
-    <div>
-        <div style="font-size:11px; font-weight:700; color:#64748b; text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">Current Threat Level</div>
-        <div style="color:#cbd5e1; font-size:14px; line-height:1.6;">{threat_desc}</div>
-    </div>
+<div class="workbench-panel">
+    <div class="panel-label">Operations Dashboard</div>
+    <div class="panel-title">Current posture: {threat_level}</div>
+    <div class="panel-copy">{threat_desc}</div>
+</div>
+<div class="metric-row" style="margin-top:14px;">
+    <div class="metric-tile"><div class="metric-label">Total analyses</div><div class="metric-value">{total}</div><div class="metric-note">history records</div></div>
+    <div class="metric-tile"><div class="metric-label">High risk</div><div class="metric-value">{high}</div><div class="metric-note">needs triage</div></div>
+    <div class="metric-tile"><div class="metric-label">Medium risk</div><div class="metric-value">{middle}</div><div class="metric-note">monitor / correlate</div></div>
+    <div class="metric-tile"><div class="metric-label">Open incidents</div><div class="metric-value">{pending}</div><div class="metric-note">not closed</div></div>
 </div>
         """,
-        unsafe_allow_html=True
+        unsafe_allow_html=True,
     )
-
-    st.markdown("<br>", unsafe_allow_html=True)
 
     df = get_history_df()
+    incident_df = get_incident_df()
 
     if df.empty:
-        st.info("暂无历史记录。可以点击左侧“一键加载演示数据”，或者先使用 AI 安全助手、日志分析器、SOAR 生成器或流量解释器。")
+        st.info("No local history yet. Load demo data or run log analysis, SOAR generation, or traffic explanation first.")
         return
 
-    st.markdown(
-        """
-<div class="section-header">
-    <span class="section-icon">&#x1F4CA;</span>
-    <span class="section-title">Analytics</span>
+    st.markdown('<div class="ops-grid">', unsafe_allow_html=True)
+    left, right = st.columns([0.95, 1.05])
+    with left:
+        st.markdown("#### Incident queue")
+        if incident_df.empty:
+            st.caption("No incidents yet.")
+        else:
+            display_cols = ["事件编号", "事件类型", "风险等级", "状态", "摘要"]
+            st.dataframe(incident_df[display_cols].head(8), use_container_width=True, hide_index=True)
+
+    with right:
+        st.markdown("#### Recent analysis records")
+        for item in st.session_state.history[:6]:
+            risk = item.get("风险等级", "低危")
+            risk_class = "risk-high" if risk == "高危" else "risk-medium" if risk in ["中高危", "中危"] else "risk-low"
+            st.markdown(
+                f"""
+<div class="event-row">
+    <div class="{risk_class}">{risk}</div>
+    <div><div class="event-type">{item.get('模块', '')}</div><div class="event-summary">{item.get('摘要', '')}</div></div>
+    <div class="small-muted">{item.get('时间', '')[-8:]}</div>
 </div>
-        """,
-        unsafe_allow_html=True
-    )
+                """,
+                unsafe_allow_html=True,
+            )
+    st.markdown('</div>', unsafe_allow_html=True)
 
     chart_template = "plotly_dark"
-
     col_left, col_right = st.columns(2)
-
     with col_left:
         module_count = df["模块"].value_counts().reset_index()
         module_count.columns = ["模块", "次数"]
-        fig = px.bar(
-            module_count, x="模块", y="次数",
-            title="模块使用次数统计",
-            color="次数",
-            color_continuous_scale=["#0ea5e9", "#6366f1", "#a78bfa"],
-            template=chart_template,
-        )
-        fig.update_layout(
-            paper_bgcolor="rgba(0,0,0,0)",
-            plot_bgcolor="rgba(0,0,0,0)",
-            font_color="#94a3b8",
-            title_font_color="#e2e8f0",
-        )
+        fig = px.bar(module_count, x="模块", y="次数", title="Module usage", color="次数", color_continuous_scale=["#334155", "#0ea5e9"], template=chart_template)
+        fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", font_color="#94a3b8", title_font_color="#e2e8f0")
         st.plotly_chart(fig, use_container_width=True)
 
     with col_right:
         risk_count = df["风险等级"].value_counts().reset_index()
         risk_count.columns = ["风险等级", "数量"]
-        color_map = {"高危": "#f87171", "中高危": "#fbbf24", "中危": "#38bdf8", "低危": "#4ade80"}
-        fig = px.pie(
-            risk_count, values="数量", names="风险等级",
-            title="风险等级分布",
-            color="风险等级",
-            color_discrete_map=color_map,
-            template=chart_template,
-        )
-        fig.update_layout(
-            paper_bgcolor="rgba(0,0,0,0)",
-            plot_bgcolor="rgba(0,0,0,0)",
-            font_color="#94a3b8",
-            title_font_color="#e2e8f0",
-        )
+        color_map = {"高危": "#f87171", "中高危": "#fbbf24", "中危": "#fbbf24", "低危": "#4ade80"}
+        fig = px.bar(risk_count, x="风险等级", y="数量", title="Risk distribution", color="风险等级", color_discrete_map=color_map, template=chart_template)
+        fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)", font_color="#94a3b8", title_font_color="#e2e8f0", showlegend=False)
         st.plotly_chart(fig, use_container_width=True)
-
-    st.markdown(
-        """
-<div class="section-header">
-    <span class="section-icon">&#x1F4C8;</span>
-    <span class="section-title">Risk Trend</span>
-</div>
-        """,
-        unsafe_allow_html=True
-    )
-
-    trend_df = df.copy()
-    trend_df["时间"] = pd.to_datetime(trend_df["时间"])
-    trend_df["风险值"] = trend_df["风险等级"].apply(get_risk_order)
-    trend_df = trend_df.sort_values("时间")
-
-    fig = px.line(
-        trend_df, x="时间", y="风险值",
-        markers=True, title="风险等级趋势",
-        template=chart_template,
-    )
-    fig.update_traces(line_color="#38bdf8", marker_color="#6366f1")
-    fig.update_layout(
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(0,0,0,0)",
-        font_color="#94a3b8",
-        title_font_color="#e2e8f0",
-    )
-    st.plotly_chart(fig, use_container_width=True)
-
 
 def render_chatbot():
     st.markdown(

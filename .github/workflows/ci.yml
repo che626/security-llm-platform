@@ -20,3 +20,5 @@ jobs:
           pip install -r requirements.txt
       - name: Run project checks
         run: python scripts/check_project.py
+      - name: Run tests
+        run: pytest -q
