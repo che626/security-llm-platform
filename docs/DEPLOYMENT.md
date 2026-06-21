@@ -1,6 +1,6 @@
 # Deployment Guide
 
-This project is designed for local portfolio review. Treat public deployment as a separate hardening project.
+This project is designed for local operation and reproducible demonstrations. Treat public deployment as a separate hardening project.
 
 ## Local Demo
 
@@ -39,7 +39,7 @@ The app remains usable without Ollama because it falls back to rule + RAG templa
 git init
 git branch -M main
 git add .
-git commit -m "Package security LLM platform portfolio project"
+git commit -m "Package security LLM platform"
 git remote add origin <REMOTE_URL>
 git push -u origin main
 ```

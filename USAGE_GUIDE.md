@@ -110,7 +110,7 @@ Converts natural-language response requirements into YAML. Risky actions such as
 
 ### Report Export Center
 
-Exports Markdown, Word-compatible `.doc`, HTML, and CSV data for portfolio review or incident documentation.
+Exports Markdown, Word-compatible `.doc`, HTML, and CSV data for local review or incident documentation.
 
 ### DeepSpeed ZeRO Experiment Console
 

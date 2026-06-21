@@ -2,11 +2,11 @@
 
 A defensive AI security analysis workbench for SOC-style triage: raw logs go in, evidence, IOCs, RAG context, attack-chain notes, SOAR playbooks and reports come out.
 
-> Built as an AI security / backend portfolio project. The default path runs locally without an LLM server, while FastAPI endpoints and optional model hooks show how the workflow can be extended.
+The default path runs locally without an LLM server, while FastAPI endpoints and optional model hooks show how the workflow can be extended.
 
 ## Why This Project Exists
 
-Security AI demos often stop at a chat box. This project focuses on the workflow an analyst or backend reviewer can inspect:
+Security AI demos often stop at a chat box. This project focuses on the workflow an analyst or maintainer can inspect:
 
 1. preserve the input evidence,
 2. explain why a finding was raised,
@@ -14,7 +14,7 @@ Security AI demos often stop at a chat box. This project focuses on the workflow
 4. expose the same behavior through APIs,
 5. generate response plans without executing destructive actions.
 
-## Reviewer Signals
+## Project Signals
 
 - **Backend/API**: FastAPI endpoints for health, chat, log analysis, IOC extraction, attack-chain analysis, RAG retrieval and SOAR simulation.
 - **AI safety boundary**: default rule + RAG fallback; optional model providers are enhancement, not a dependency.
@@ -26,10 +26,6 @@ Security AI demos often stop at a chat box. This project focuses on the workflow
 ## Screenshots
 
 The app is intentionally moving away from a flashy AI dashboard toward a denser analyst workbench.
-
-![Login screen](docs/assets/login.png)
-
-![Mobile login](docs/assets/login-mobile.png)
 
 ![FastAPI docs](docs/assets/api-docs.png)
 
@@ -49,7 +45,7 @@ Suggested review flow: login -> load demo data -> workbench -> dashboard -> log 
 
 ```mermaid
 flowchart LR
-    User[Analyst / Reviewer] --> UI[Streamlit Dashboard]
+    User[Security Analyst] --> UI[Streamlit Dashboard]
     UI --> Local[Local Rule + RAG Fallback]
     UI --> API[FastAPI Backend]
     API --> Analyze[Security Analysis Services]
@@ -104,7 +100,7 @@ http://127.0.0.1:8000/docs
 
 ## Demo Accounts
 
-These accounts are for local demo review only:
+These accounts are for local demonstration only:
 
 | Username | Password | Role |
 |---|---|---|
@@ -158,9 +154,9 @@ This project is defensive and educational. It focuses on log triage, incident an
 
 Generated SOAR actions are simulated by default. High-risk response actions such as blocking or isolation require manual approval in the generated playbook.
 
-## Portfolio Summary
+## Project Summary
 
-Resume-ready description:
+Short description:
 
 > Built a SOC-oriented AI security analysis platform with Streamlit and FastAPI, integrating rule-based threat detection, RAG security knowledge retrieval, IOC extraction, ATT&CK mapping, SOAR YAML playbook generation, report export, and optional local LLM integration. Designed the system to run offline with stable fallback behavior while exposing backend APIs for model and automation extensions.
 
@@ -169,7 +165,7 @@ Resume-ready description:
 - [Architecture](docs/ARCHITECTURE.md)
 - [API Reference](docs/API.md)
 - [Deployment Guide](docs/DEPLOYMENT.md)
-- [Portfolio Notes](docs/PORTFOLIO.md)
+- [Project Notes](docs/PROJECT_NOTES.md)
 - [Usage Guide](USAGE_GUIDE.md)
 
 ## License

@@ -25,4 +25,4 @@ Do not include real secrets, production logs, private IP inventories, or confide
 
 ## Demo Credentials
 
-The included accounts are local demo credentials only. They are intentionally documented for reproducible portfolio review and must not be reused in production.
+The included accounts are local demo credentials only. They are intentionally documented for reproducible local testing and must not be reused in production.

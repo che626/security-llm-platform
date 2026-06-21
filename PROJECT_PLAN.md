@@ -1,6 +1,6 @@
 # Project Roadmap
 
-This roadmap keeps the public project honest: the current repository is a portfolio-grade local SOC AI demo, not a production security platform.
+This roadmap keeps the public project honest: the current repository is a local SOC AI demo, not a production security platform.
 
 ## Current Release
 
@@ -24,7 +24,7 @@ The current release focuses on:
 - Add small pytest suite for detection, IOC extraction, and SOAR generation.
 - Split large Streamlit pages into focused modules.
 - Add example API requests in `docs/API.md`.
-- Add a lightweight Dockerfile for local review.
+- Add a lightweight Dockerfile for local operation and testing.
 
 ## Research Extensions
 

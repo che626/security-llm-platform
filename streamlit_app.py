@@ -126,7 +126,7 @@ I18N = {
     "zh": {
         "language_name": "中文",
         "language_label": "界面语言",
-        "login_kicker": "AI 安全 / 后端作品集项目",
+        "login_kicker": "本地优先的 SOC AI 分析工作台",
         "login_title": "Security LLM Platform",
         "login_subtitle": "一张面向安全分析师的证据工作台：从日志、IOC、RAG 上下文到 SOAR 响应计划，强调可复现、可解释和工程边界。",
         "login_metric_1": "离线可演示",
@@ -144,7 +144,7 @@ I18N = {
         "workflow_4_copy": "生成审批感知的 SOAR YAML，危险动作保持模拟和人工确认。",
         "login_panel_label": "本地演示入口",
         "sign_in": "登录工作台",
-        "login_copy": "演示账号写在页面中，便于面试官复现；这不是生产认证方案。",
+        "login_copy": "演示账号用于本地复现和功能验证；这不是生产认证方案。",
         "account": "账号",
         "password": "密码",
         "open_workbench": "进入分析工作台",
@@ -171,7 +171,7 @@ I18N = {
         "help_body": "**快速开始：**\n1. 点击“加载示例数据”\n2. 查看“安全态势仪表盘”\n3. 使用“日志分析器”分析日志\n4. 使用“AI 安全助手”提问\n\n**测试账号：**\n- admin / Admin#2026\n- analyst / Analyst#2026\n- researcher / Research#2026",
         "home_label": "Analyst Workbench",
         "home_title": "从原始证据到响应计划",
-        "home_copy": "首页不做炫技大屏，而是展示面试官最关心的闭环：输入是否真实、判断是否有证据、RAG 如何回退、接口边界是否清楚、报告是否能交付。",
+        "home_copy": "首页展示完整分析闭环：输入是否真实、判断是否有证据、RAG 如何回退、接口边界是否清楚、报告是否能交付。",
         "sample_input": "输入样例",
         "sample_input_copy": "SSH 失败登录、SQL 注入探测、防火墙拒绝记录和可疑 HTTP 回连摘要。",
         "detection": "检测解释",
@@ -224,7 +224,7 @@ I18N = {
     "en": {
         "language_name": "English",
         "language_label": "Language",
-        "login_kicker": "AI security / backend portfolio project",
+        "login_kicker": "Local-first SOC AI analysis workbench",
         "login_title": "Security LLM Platform",
         "login_subtitle": "An evidence workbench for security analysts: logs, IOCs, RAG context and SOAR response plans with reproducible behavior and clear engineering boundaries.",
         "login_metric_1": "Offline demo",
@@ -269,7 +269,7 @@ I18N = {
         "help_body": "**Quick start:**\n1. Click “Load demo data”\n2. Open “Security Posture Dashboard”\n3. Analyze logs in “Log Analyzer”\n4. Ask questions in “AI Security Assistant”\n\n**Demo accounts:**\n- admin / Admin#2026\n- analyst / Analyst#2026\n- researcher / Research#2026",
         "home_label": "Analyst Workbench",
         "home_title": "From raw evidence to response plan",
-        "home_copy": "The first screen shows the loop interviewers care about: realistic input, evidence-based judgment, RAG fallback, explicit API boundaries and a deliverable report path.",
+        "home_copy": "The first screen shows the core analysis loop: realistic input, evidence-based judgment, RAG fallback, explicit API boundaries and a deliverable report path.",
         "sample_input": "Sample input",
         "sample_input_copy": "SSH failed logins, SQL injection probes, firewall deny records and suspicious HTTP callback summaries.",
         "detection": "Detection",
@@ -2461,7 +2461,7 @@ def render_home():
             ["FastAPI", "Implemented", "Health, chat, log analysis, IOC, attack chain, RAG and SOAR endpoints"],
             ["SOAR", "Implemented", "YAML generation with manual approval for risky response actions"],
             ["DeepSpeed / LoRA", "Research extension", "Scaffolding only unless validated on real GPU hardware"],
-        ], columns=["Area", "Status", "Reviewer signal"])
+        ], columns=["Area", "Status", "Operational signal"])
     else:
         modules = pd.DataFrame([
             ["检测分析", "已实现", "SSH 暴力破解、SQL 注入、扫描和 C2 类指标"],
@@ -2469,7 +2469,7 @@ def render_home():
             ["FastAPI", "已实现", "健康检查、问答、日志分析、IOC、攻击链、RAG 和 SOAR 接口"],
             ["SOAR", "已实现", "生成带人工审批机制的 YAML 响应剧本"],
             ["DeepSpeed / LoRA", "研究扩展", "仅作为实验接口，不夸大为生产级训练平台"],
-        ], columns=["能力域", "状态", "面试官可观察信号"])
+        ], columns=["能力域", "状态", "工程可观察信号"])
     st.dataframe(modules, use_container_width=True, hide_index=True)
 
 def render_dashboard():
@@ -5292,7 +5292,7 @@ def render_system_doc():
     )
 
     st.subheader("项目定位")
-    st.write("Security LLM Platform 是一个面向 SOC 安全运营场景的作品集级智能安全分析平台。")
+    st.write("Security LLM Platform 是一个面向 SOC 安全运营场景的本地优先智能安全分析平台。")
     st.write("项目重点展示从日志研判到响应编排的闭环能力：日志 / 流量分析、RAG 知识增强、IOC 提取、攻击链还原、ATT&CK 映射、SOAR 剧本生成、事件处置和报告导出。")
     st.info("默认模式为规则 + RAG 模板，不依赖外部模型即可稳定演示；Ollama / OpenAI 兼容 API 和 DeepSpeed ZeRO / LoRA 是可选扩展方向。")
 

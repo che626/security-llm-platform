@@ -1,6 +1,6 @@
 # Contributing
 
-This repository is maintained as a portfolio-grade security AI demo. Contributions are welcome when they improve clarity, reproducibility, defensive security value, or engineering quality.
+This repository is maintained as a local-first defensive security AI demo. Contributions are welcome when they improve clarity, reproducibility, defensive security value, or engineering quality.
 
 ## Development Setup
 

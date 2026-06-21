@@ -1,6 +1,6 @@
 # Quick Start
 
-This guide starts the portfolio demo in about five minutes on Windows.
+This guide starts the local demo in about five minutes on Windows.
 
 ## 1. Install Core Dependencies
 

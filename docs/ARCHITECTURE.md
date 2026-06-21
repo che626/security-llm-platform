@@ -2,7 +2,7 @@
 
 ## Overview
 
-Security LLM Platform is structured as a local-first SOC AI demo. The frontend is optimized for reviewer experience, while the backend exposes clean APIs that can be extended with real model services or persistence later.
+Security LLM Platform is structured as a local-first SOC AI demo. The frontend is optimized for analyst workflow clarity, while the backend exposes clean APIs that can be extended with real model services or persistence later.
 
 ```mermaid
 flowchart TD
@@ -33,7 +33,7 @@ The UI remains usable when the backend or model provider is unavailable.
 
 ### Streamlit Frontend
 
-`streamlit_app.py` provides the portfolio UI:
+`streamlit_app.py` provides the analyst UI:
 
 - login and role-based navigation
 - SOC command center dashboard
